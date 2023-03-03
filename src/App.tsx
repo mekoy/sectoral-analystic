@@ -1,17 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Layout from "components/Layout";
-import DataVizAceptedYear20142019 from "pages/CurvesConsoAcepted2014-2019";
 import Header from "components/Header";
-import { Col } from "reactstrap";
+import { Button, ButtonGroup, ButtonToolbar, Col } from "reactstrap";
+import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
 import { ICurvesConsoContextType, useCurvesConsoContext } from "pages/context";
 import DataVizModule20142019 from "modules/DataVizConso-2014-2019";
 import DataVizConsumption2022 from "modules/DataVizConso-2022";
-import ChartsBySlider from "components/ChartsBySlider/ChartsBySlider";
 
 const App: React.FC<{}> = () => {
   const { dataFetch }: ICurvesConsoContextType = useCurvesConsoContext();
+  const [componentIndex, setComponentIndex] = useState(0);
+
+  const nextComponent = () => {
+    setComponentIndex((prevIndex) =>
+      prevIndex === components.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevComponent = () => {
+    setComponentIndex((prevIndex) =>
+      prevIndex === 0 ? components.length - 1 : prevIndex - 1
+    );
+  };
+
+  const components = [
+    <DataVizModule20142019 dataApi={dataFetch} />,
+    <DataVizConsumption2022 dataApi={dataFetch} />,
+  ];
+
   return (
     <Layout>
       <Header>
@@ -21,14 +39,20 @@ const App: React.FC<{}> = () => {
           </h1>
         </Col>
       </Header>
-      <ChartsBySlider>
-        <div>
-          <DataVizModule20142019 dataApi={dataFetch} />
-        </div>
-        <div>
-          <DataVizConsumption2022 dataApi={dataFetch} />
-        </div>
-      </ChartsBySlider>
+      <>
+        <ButtonToolbar className="justify-content-end">
+          <ButtonGroup className="me-2">
+            <Button color="link" outline size="lg" onClick={prevComponent}>
+              <BsChevronLeft />
+            </Button>
+            <Button color="link" outline size="lg" onClick={nextComponent}>
+              <BsChevronRight />
+            </Button>
+          </ButtonGroup>
+        </ButtonToolbar>
+
+        {components[componentIndex]}
+      </>
     </Layout>
   );
 };

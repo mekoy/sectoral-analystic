@@ -27,6 +27,8 @@ const DataVizConsumption2022: React.FC<IDataVizGlobal> = ({ dataApi }) => {
         data: dataList2022 && dataList2022.map((item) => item.conso_realisee),
         borderColor: "rgba(255, 0, 0, 1)",
         backgroundColor: "rgba(255, 0, 0, 1)",
+        fill: false,
+        tension: 0.1,
       },
       {
         label: conso_normal,
@@ -38,20 +40,39 @@ const DataVizConsumption2022: React.FC<IDataVizGlobal> = ({ dataApi }) => {
       },
     ],
   };
+
+  let delayed: boolean;
   const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: "top" as const,
+    type: "line",
+    data: data,
+    options: {
+      responsive: true,
+      interaction: {
+        mode: "index" as const,
+        intersect: false,
       },
-      title: {
-        display: true,
-        text: conso_realized,
+      animation: {
+        onComplete: () => {
+          delayed = true;
+        },
+        delay: (context: any) => {
+          let delay = 0;
+          if (
+            context.type === "data" &&
+            context.mode === "default" &&
+            !delayed
+          ) {
+            delay = context.dataIndex * 3000 + context.datasetIndex * 100;
+          }
+          return delay;
+        },
       },
       scales: {
+        x: {
+          stacked: true,
+        },
         y: {
-          suggestedMin: 50,
-          suggestedMax: 100,
+          stacked: true,
         },
       },
     },
