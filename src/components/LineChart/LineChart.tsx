@@ -12,7 +12,7 @@ import {
 import {Line} from "react-chartjs-2";
 
 ChartJS.defaults.font.size = 13;
-
+export const chart = ChartJS.defaults;
 type LineChartProps = {
 	width?: string | number;
 	height?: string | number;
