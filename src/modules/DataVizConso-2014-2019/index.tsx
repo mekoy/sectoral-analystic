@@ -1,7 +1,7 @@
 import {IdataResponse, IdataViz20142019} from "pages/context";
 import React from "react";
 
-import {labels} from "utils";
+import {datavizConfig, labels} from "utils";
 import LineChart from "components/LineChart/LineChart";
 
 interface IDataVizGlobal {
@@ -111,12 +111,12 @@ const DataVizModule20142019: React.FC<IDataVizGlobal> = ({dataApi}) => {
 
 	//total count moy 2014 - 2019
 	const dataTotalMoy = [
-		sumWithInitial2014,
-		sumWithInitial2015,
-		sumWithInitial2016,
-		sumWithInitial2017,
-		sumWithInitial2018,
-		sumWithInitial2019
+		Math.ceil(sumWithInitial2014),
+		Math.ceil(sumWithInitial2015),
+		Math.ceil(sumWithInitial2016),
+		Math.ceil(sumWithInitial2017),
+		Math.ceil(sumWithInitial2018),
+		Math.ceil(sumWithInitial2019)
 	];
 
 	const greaterThanSeven2014 = greaterThanSeven.filter((number) => {
@@ -155,69 +155,74 @@ const DataVizModule20142019: React.FC<IDataVizGlobal> = ({dataApi}) => {
 
 	const data = {
 		labels,
-		label: "Filled",
+		label: "",
 		datasets: [
 			{
 				label: "Dataset consomation normale 2014 - 2019",
 				data: dataTotalMoy,
 				borderColor: "rgb(0, 0, 0,0.9)",
 				backgroundColor: "rgb(0, 0, 0,0.9)",
-				Filled: true
+				Filled: true,
+				pointStyle: false,
+				tension: 0.2
 			},
 			{
-				label: "Dataset 2014",
-				data: greaterThanSeven2014.map((years) => years.consumption_average),
+				label: "",
+				data: greaterThanSeven2014.map((years) =>
+					Math.ceil(years.consumption_average)
+				),
 				borderColor: "rgb(0, 0, 0,0.2)",
 				backgroundColor: "rgb(0, 0, 0,0.2)",
-				Filled: false
+				Filled: false,
+				pointStyle: false
 			},
 			{
-				label: "Dataset 2015",
+				label: "",
 				data: greaterThanSeven2015.map((years) => years.consumption_average),
-				borderColor: "rgb(19, 100, 133,0.2)",
-				backgroundColor: "rgb(19, 100, 133,0.2)",
-				Filled: true
+				borderColor: "rgb(0, 0, 0,0.2)",
+				backgroundColor: "rgb(0, 0, 0,0.2)",
+				Filled: true,
+				pointStyle: false
 			},
 			{
-				label: "Dataset 2016",
+				label: "",
 				data: greaterThanSeven2016.map((years) => years.consumption_average),
-				borderColor: "rgb(47, 180, 30,0.2)",
-				backgroundColor: "rgb(47, 180, 30,0.2)"
+				borderColor: "rgb(0, 0, 0,0.2)",
+				backgroundColor: "rgb(0, 0, 0,0.2)",
+				pointStyle: false
 			},
 			{
-				label: "Dataset 2017",
+				label: "",
 				data: greaterThanSeven2017.map((years) => years.consumption_average),
-				borderColor: "rgb(555, 19, 133,0.2)",
-				backgroundColor: "rgb(555, 19, 133,0.2)"
+				borderColor: "rgb(0, 0, 0,0.2)",
+				backgroundColor: "rgb(0, 0, 0,0.2)",
+				pointStyle: false
 			},
 			{
-				label: "Dataset 2018",
+				label: "",
 				data: greaterThanSeven2018.map((years) => years.consumption_average),
-				borderColor: "rgb(79, 15, 13, 0.2)",
-				backgroundColor: "rgb(79, 15, 13,0.2)"
+				borderColor: "rgb(0, 0, 0, 0.2)",
+				backgroundColor: "rgb(0, 0, 0,0.2)",
+				pointStyle: false
 			},
 			{
 				label: "Dataset 2019",
 				data: greaterThanSeven2019.map((years) => years.consumption_average),
-				borderColor: "rgb(68, 19, 133,0.2)",
-				backgroundColor: "rgb(68, 19, 133,0.2)"
+				borderColor: "rgb(0, 0, 0,0.2)",
+				backgroundColor: "rgb(0, 0, 0,0.2)",
+				pointStyle: false
 			}
 		]
 	};
-	const options = {
-		responsive: true,
-		plugins: {
-			legend: {
-				position: "top" as const
-			},
-			title: {
-				display: true,
-				text: "Consommation attendu 2014 - 2019"
-			}
-		}
-	};
 
-	return <LineChart options={options} data={data} />;
+	return (
+		<LineChart
+			options={datavizConfig[0].options}
+			data={data}
+			plugins={datavizConfig[0].options}
+			width={"500px"}
+		/>
+	);
 };
 
 export default DataVizModule20142019;
