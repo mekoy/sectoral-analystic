@@ -221,7 +221,6 @@ const DataVizModule20142019: React.FC<IDataVizGlobal> = ({dataApi}) => {
 			data={data}
 			plugins={datavizConfig[0].options}
 			width={"500px"}
-			height={"500px"}
 		/>
 	);
 };

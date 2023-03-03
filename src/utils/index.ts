@@ -36,12 +36,8 @@ export const datavizConfig = [
 	{
 		options: {
 			responsive: true,
-			maintainAspectRatio: false,
 			onClick: (indexValue: any) => indexValue,
 			animations: {
-				x: {
-					duration: 0
-				},
 				tension: {
 					duration: 1000,
 					easing: "easeInSine",
@@ -65,19 +61,6 @@ export const datavizConfig = [
 					} else {
 						value = context.currentStep / context.numSteps;
 					}
-				}
-			},
-			interaction: {
-				mode: "point",
-				axis: "x",
-				intersect: false
-			},
-			layout: {
-				padding: {
-					left: 0,
-					right: 10,
-					top: 0,
-					bottom: 0
 				}
 			},
 			plugins: {
@@ -107,18 +90,7 @@ export const datavizConfig = [
 				legend: {
 					display: false,
 					usePointStyle: false,
-					labels: {}
-				},
-				formatter: {
-					callbacks: {
-						label: (context: any) => context
-					}
-				},
-				hover: {
-					mode: "index",
-					intersect: true,
-					footerFontStyle: "normal",
-					cursor: "pointer"
+					labels: false
 				}
 			},
 			scale: {
@@ -146,7 +118,7 @@ export const datavizConfig = [
 						drawBorder: false
 					},
 					ticks: {
-						beginAtZero: true
+						beginAtZero: false
 					}
 				}
 			}
