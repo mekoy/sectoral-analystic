@@ -1,0 +1,186 @@
+{
+  "data": [
+    {
+      "Annee": 2022,
+      "Mois": 10,
+      "semaine": 39,
+      "conso_realisee": 45910,
+      "conso_condNormaleTemp": 43718,
+      "conso_moyAnneePrec": 47619
+    },
+    {
+      "Annee": 2022,
+      "Mois": 10,
+      "semaine": 40,
+      "conso_realisee": 45369,
+      "conso_condNormaleTemp": 45068,
+      "conso_moyAnneePrec": 48655
+    },
+    {
+      "Annee": 2022,
+      "Mois": 10,
+      "semaine": 41,
+      "conso_realisee": 45626,
+      "conso_condNormaleTemp": 45985,
+      "conso_moyAnneePrec": 50193
+    },
+    {
+      "Annee": 2022,
+      "Mois": 10,
+      "semaine": 42,
+      "conso_realisee": 43983,
+      "conso_condNormaleTemp": 47074,
+      "conso_moyAnneePrec": 51754
+    },
+    {
+      "Annee": 2022,
+      "Mois": 10,
+      "semaine": 43,
+      "conso_realisee": 43513,
+      "conso_condNormaleTemp": 48603,
+      "conso_moyAnneePrec": 54232
+    },
+    {
+      "Annee": 2022,
+      "Mois": 10,
+      "semaine": 44,
+      "industrie": 1552,
+      "residentiel": 813,
+      "tertiaire": 1514,
+      "conso_realisee": 44786,
+      "conso_condNormaleTemp": 50175,
+      "conso_moyAnneePrec": 55951
+    },
+    {
+      "Annee": 2022,
+      "Mois": 11,
+      "semaine": 45,
+      "conso_realisee": 49167,
+      "conso_condNormaleTemp": 54706,
+      "conso_moyAnneePrec": 59459
+    },
+    {
+      "Annee": 2022,
+      "Mois": 11,
+      "semaine": 46,
+      "conso_realisee": 51363,
+      "conso_condNormaleTemp": 57226,
+      "conso_moyAnneePrec": 61969
+    },
+    {
+      "Annee": 2022,
+      "Mois": 11,
+      "semaine": 47,
+      "conso_realisee": 56653,
+      "conso_condNormaleTemp": 59846,
+      "conso_moyAnneePrec": 64905
+    },
+    {
+      "Annee": 2022,
+      "Mois": 12,
+      "semaine": 48,
+      "conso_realisee": 60403,
+      "conso_condNormaleTemp": 61505,
+      "conso_moyAnneePrec": 67838
+    },
+    {
+      "Annee": 2022,
+      "Mois": 12,
+      "semaine": 49,
+      "conso_realisee": 67003,
+      "conso_condNormaleTemp": 63517,
+      "conso_moyAnneePrec": 70014
+    },
+    {
+      "Annee": 2022,
+      "Mois": 12,
+      "semaine": 50,
+      "industrie": 946,
+      "residentiel": 2565,
+      "tertiaire": 1997,
+      "conso_realisee": 72002,
+      "conso_condNormaleTemp": 65493,
+      "conso_moyAnneePrec": 71650
+    },
+    {
+      "Annee": 2022,
+      "Mois": 12,
+      "semaine": 51,
+      "conso_realisee": 56619,
+      "conso_condNormaleTemp": 64692,
+      "conso_moyAnneePrec": 69887
+    },
+    {
+      "Annee": 2023,
+      "Mois": 1,
+      "semaine": 52,
+      "conso_realisee": 51003,
+      "conso_condNormaleTemp": 61818,
+      "conso_moyAnneePrec": 67626
+    },
+    {
+      "Annee": 2023,
+      "Mois": 1,
+      "semaine": 52,
+      "conso_realisee": 51003,
+      "conso_condNormaleTemp": 61818,
+      "conso_moyAnneePrec": 67626
+    },
+    {
+      "Annee": 2023,
+      "Mois": 1,
+      "semaine": 1,
+      "conso_realisee": 54076,
+      "conso_condNormaleTemp": 66866,
+      "conso_moyAnneePrec": 74238
+    },
+    {
+      "Annee": 2023,
+      "Mois": 1,
+      "semaine": 2,
+      "conso_realisee": 58282,
+      "conso_condNormaleTemp": 68199,
+      "conso_moyAnneePrec": 74097
+    },
+    {
+      "Annee": 2023,
+      "Mois": 1,
+      "semaine": 3,
+      "conso_realisee": 68183,
+      "conso_condNormaleTemp": 68525,
+      "conso_moyAnneePrec": 74123
+    },
+    {
+      "Annee": 2023,
+      "Mois": 1,
+      "semaine": 4,
+      "conso_realisee": 73572,
+      "conso_condNormaleTemp": 67712,
+      "conso_moyAnneePrec": 73010
+    },
+    {
+      "Annee": 2023,
+      "Mois": 2,
+      "semaine": 5,
+      "conso_realisee": 65750,
+      "conso_condNormaleTemp": 65297,
+      "conso_moyAnneePrec": 72007
+    },
+    {
+      "Annee": 2023,
+      "Mois": 2,
+      "semaine": 6,
+      "conso_realisee": 67365,
+      "conso_condNormaleTemp": 65001,
+      "conso_moyAnneePrec": 71430
+    },
+    {
+      "Annee": 2023,
+      "Mois": 2,
+      "semaine": 7,
+      "conso_realisee": 60714,
+      "conso_condNormaleTemp": 62578,
+      "conso_moyAnneePrec": 69738
+    }
+  ]
+}

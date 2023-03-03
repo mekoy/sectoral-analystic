@@ -1,0 +1,1434 @@
+{
+  "data": [
+    {
+      "target_date": "10/02/2022",
+      "week": 39,
+      "day_week": "39_7",
+      "consumption_norm_2022": 43718.1062916667,
+      "consumption_norm_moy": 47618.9439375,
+      "consumption_average": 45910.4166666667,
+      "consumption_moy": 47713.1944444444,
+      "sobriety": 3900.83764583334,
+      "climat": -2192.310375,
+      "year": 2022
+    },
+    {
+      "target_date": "10/09/2022",
+      "week": 40,
+      "day_week": "40_7",
+      "consumption_norm_2022": 45068.1479166667,
+      "consumption_norm_moy": 48655.2556805556,
+      "consumption_average": 45369.1666666667,
+      "consumption_moy": 48842.9861111111,
+      "sobriety": 3587.10776388889,
+      "climat": -301.018750000003,
+      "year": 2022
+    },
+    {
+      "target_date": "10/16/2022",
+      "week": 41,
+      "day_week": "41_7",
+      "consumption_norm_2022": 45984.6192083333,
+      "consumption_norm_moy": 50192.9372361111,
+      "consumption_average": 45625.8333333333,
+      "consumption_moy": 50496.8055555556,
+      "sobriety": 4208.31802777777,
+      "climat": 358.785875000001,
+      "year": 2022
+    },
+    {
+      "target_date": "10/23/2022",
+      "week": 42,
+      "day_week": "42_7",
+      "consumption_norm_2022": 47074.4557083333,
+      "consumption_norm_moy": 51754.3507847222,
+      "consumption_average": 43982.9166666667,
+      "consumption_moy": 51244.0972222222,
+      "sobriety": 4679.89507638889,
+      "climat": 3091.53904166667,
+      "year": 2022
+    },
+    {
+      "target_date": "10/30/2022",
+      "week": 43,
+      "day_week": "43_7",
+      "consumption_norm_2022": 48602.7512916667,
+      "consumption_norm_moy": 54231.5262816667,
+      "consumption_average": 43512.5,
+      "consumption_moy": 53077.9166666667,
+      "sobriety": 5628.77499,
+      "climat": 5090.25129166667,
+      "year": 2022
+    },
+    {
+      "target_date": "11/06/2022",
+      "week": 44,
+      "day_week": "44_7",
+      "consumption_norm_2022": 50175.0436458333,
+      "consumption_norm_moy": 55950.6898715278,
+      "consumption_average": 44785.9375,
+      "consumption_moy": 55384.3171296296,
+      "sobriety": 5775.64622569444,
+      "climat": 5389.10614583334,
+      "year": 2022
+    },
+    {
+      "target_date": "11/13/2022",
+      "week": 45,
+      "day_week": "45_7",
+      "consumption_norm_2022": 54706.3167708333,
+      "consumption_norm_moy": 59458.9082986111,
+      "consumption_average": 49166.6666666667,
+      "consumption_moy": 59316.8402777778,
+      "sobriety": 4752.59152777777,
+      "climat": 5539.65010416667,
+      "year": 2022
+    },
+    {
+      "target_date": "11/20/2022",
+      "week": 46,
+      "day_week": "46_7",
+      "consumption_norm_2022": 57225.7734166667,
+      "consumption_norm_moy": 61969.3374079861,
+      "consumption_average": 51363.3333333333,
+      "consumption_moy": 60538.2465277778,
+      "sobriety": 4743.56399131944,
+      "climat": 5862.44008333333,
+      "year": 2022
+    },
+    {
+      "target_date": "11/27/2022",
+      "week": 47,
+      "day_week": "47_7",
+      "consumption_norm_2022": 59845.6835833333,
+      "consumption_norm_moy": 64904.8988125,
+      "consumption_average": 56652.5,
+      "consumption_moy": 63007.0138888889,
+      "sobriety": 5059.21522916667,
+      "climat": 3193.18358333333,
+      "year": 2022
+    },
+    {
+      "target_date": "12/04/2022",
+      "week": 48,
+      "day_week": "48_7",
+      "consumption_norm_2022": 61505.4579166667,
+      "consumption_norm_moy": 67837.5778402778,
+      "consumption_average": 60403.3333333333,
+      "consumption_moy": 65924.4444444444,
+      "sobriety": 6332.11992361111,
+      "climat": 1102.12458333333,
+      "year": 2022
+    },
+    {
+      "target_date": "12/11/2022",
+      "week": 49,
+      "day_week": "49_7",
+      "consumption_norm_2022": 63516.590125,
+      "consumption_norm_moy": 70014.0943611111,
+      "consumption_average": 67002.9166666667,
+      "consumption_moy": 67812.5694444444,
+      "sobriety": 6497.50423611111,
+      "climat": -3486.32654166667,
+      "year": 2022
+    },
+    {
+      "target_date": "12/18/2022",
+      "week": 50,
+      "day_week": "50_7",
+      "consumption_norm_2022": 65493.3612083333,
+      "consumption_norm_moy": 71650.4022847222,
+      "consumption_average": 72001.6666666667,
+      "consumption_moy": 68884.7916666667,
+      "sobriety": 6157.04107638889,
+      "climat": -6508.30545833334,
+      "year": 2022
+    },
+    {
+      "target_date": "12/25/2022",
+      "day_week": "ChristmasDay",
+      "week": 51,
+      "consumption_norm_2022": 64691.5088333333,
+      "consumption_norm_moy": 69886.5658854167,
+      "consumption_average": 56619.1666666667,
+      "consumption_moy": 63566.9270833333,
+      "sobriety": 5195.05705208334,
+      "climat": 8072.34216666667,
+      "year": 2022
+    },
+    {
+      "target_date": "01/01/2023",
+      "day_week": "NewYearDay",
+      "week": 52,
+      "consumption_norm_2022": 61817.6352083333,
+      "consumption_norm_moy": 67626.1509895833,
+      "consumption_average": 51002.9166666667,
+      "consumption_moy": 61579.1666666667,
+      "sobriety": 5808.51578125,
+      "climat": 10814.7185416667,
+      "year": 2022
+    },
+    {
+      "target_date": "01/08/2023",
+      "week": 1,
+      "day_week": "1_7",
+      "consumption_norm_2022": 66865.8089166667,
+      "consumption_norm_moy": 74237.8337100694,
+      "consumption_average": 54075.8333333333,
+      "consumption_moy": 70183.1018518519,
+      "sobriety": 7372.02479340279,
+      "climat": 12789.9755833333,
+      "year": 2022
+    },
+    {
+      "target_date": "01/15/2023",
+      "week": 2,
+      "day_week": "2_7",
+      "consumption_norm_2022": 68199.1520416667,
+      "consumption_norm_moy": 74096.5726041667,
+      "consumption_average": 58281.6666666667,
+      "consumption_moy": 70075.0694444445,
+      "sobriety": 5897.4205625,
+      "climat": 9917.485375,
+      "year": 2022
+    },
+    {
+      "target_date": "01/22/2023",
+      "week": 3,
+      "day_week": "3_7",
+      "consumption_norm_2022": 68524.6909583333,
+      "consumption_norm_moy": 74122.9819652778,
+      "consumption_average": 68182.5,
+      "consumption_moy": 72466.5277777778,
+      "sobriety": 5598.29100694445,
+      "climat": 342.190958333333,
+      "year": 2022
+    },
+    {
+      "target_date": "01/29/2023",
+      "week": 4,
+      "day_week": "4_7",
+      "consumption_norm_2022": 67712.118,
+      "consumption_norm_moy": 73009.9524791667,
+      "consumption_average": 73572.0833333333,
+      "consumption_moy": 72922.7083333333,
+      "sobriety": 5297.83447916668,
+      "climat": -5859.96533333333,
+      "year": 2022
+    },
+    {
+      "target_date": "02/05/2023",
+      "week": 5,
+      "day_week": "5_7",
+      "consumption_norm_2022": 65297.0135416667,
+      "consumption_norm_moy": 72007.4579722222,
+      "consumption_average": 65750,
+      "consumption_moy": 69897.9861111111,
+      "sobriety": 6710.44443055556,
+      "climat": -452.986458333333,
+      "year": 2022
+    },
+    {
+      "target_date": "02/12/2023",
+      "week": 6,
+      "day_week": "6_7",
+      "consumption_norm_2022": 65000.8325,
+      "consumption_norm_moy": 71430.0866319444,
+      "consumption_average": 67364.5833333333,
+      "consumption_moy": 73163.3333333333,
+      "sobriety": 6429.25413194444,
+      "climat": -2363.75083333334,
+      "year": 2022
+    },
+    {
+      "target_date": "02/19/2023",
+      "week": 7,
+      "day_week": "7_7",
+      "consumption_norm_2022": 62577.6529166667,
+      "consumption_norm_moy": 69737.6353541667,
+      "consumption_average": 60714.1666666667,
+      "consumption_moy": 70588.1944444444,
+      "sobriety": 7159.9824375,
+      "climat": 1863.48624999999,
+      "year": 2022
+    },
+    {
+      "target_date": "10/02/2022",
+      "week": 39,
+      "day_week": "39_7",
+      "year": 2013
+    },
+    {
+      "target_date": "10/02/2022",
+      "week": 39,
+      "day_week": "39_7",
+      "consumption_average": 47499.5833333333,
+      "year": 2014
+    },
+    {
+      "target_date": "10/02/2022",
+      "week": 39,
+      "day_week": "39_7",
+      "consumption_average": 48422.5,
+      "year": 2015
+    },
+    {
+      "target_date": "10/02/2022",
+      "week": 39,
+      "day_week": "39_7",
+      "consumption_average": 47462.0833333333,
+      "year": 2016
+    },
+    {
+      "target_date": "10/02/2022",
+      "week": 39,
+      "day_week": "39_7",
+      "consumption_average": 48780.4166666667,
+      "year": 2017
+    },
+    {
+      "target_date": "10/02/2022",
+      "week": 39,
+      "day_week": "39_7",
+      "consumption_average": 47878.3333333333,
+      "year": 2018
+    },
+    {
+      "target_date": "10/02/2022",
+      "week": 39,
+      "day_week": "39_7",
+      "consumption_average": 46236.25,
+      "year": 2019
+    },
+    {
+      "target_date": "10/02/2022",
+      "week": 39,
+      "day_week": "39_7",
+      "consumption_average": 45296.25,
+      "year": 2020
+    },
+    {
+      "target_date": "10/02/2022",
+      "week": 39,
+      "day_week": "39_7",
+      "consumption_average": 46554.1666666667,
+      "year": 2021
+    },
+    {
+      "target_date": "10/09/2022",
+      "week": 40,
+      "day_week": "40_7",
+      "year": 2013
+    },
+    {
+      "target_date": "10/09/2022",
+      "week": 40,
+      "day_week": "40_7",
+      "consumption_average": 47836.6666666667,
+      "year": 2014
+    },
+    {
+      "target_date": "10/09/2022",
+      "week": 40,
+      "day_week": "40_7",
+      "consumption_average": 49139.5833333333,
+      "year": 2015
+    },
+    {
+      "target_date": "10/09/2022",
+      "week": 40,
+      "day_week": "40_7",
+      "consumption_average": 49352.0833333333,
+      "year": 2016
+    },
+    {
+      "target_date": "10/09/2022",
+      "week": 40,
+      "day_week": "40_7",
+      "consumption_average": 49728.75,
+      "year": 2017
+    },
+    {
+      "target_date": "10/09/2022",
+      "week": 40,
+      "day_week": "40_7",
+      "consumption_average": 49350,
+      "year": 2018
+    },
+    {
+      "target_date": "10/09/2022",
+      "week": 40,
+      "day_week": "40_7",
+      "consumption_average": 47650.8333333333,
+      "year": 2019
+    },
+    {
+      "target_date": "10/09/2022",
+      "week": 40,
+      "day_week": "40_7",
+      "consumption_average": 49456.25,
+      "year": 2020
+    },
+    {
+      "target_date": "10/09/2022",
+      "week": 40,
+      "day_week": "40_7",
+      "consumption_average": 48415.4166666667,
+      "year": 2021
+    },
+    {
+      "target_date": "10/16/2022",
+      "week": 41,
+      "day_week": "41_7",
+      "year": 2013
+    },
+    {
+      "target_date": "10/16/2022",
+      "week": 41,
+      "day_week": "41_7",
+      "consumption_average": 49455,
+      "year": 2014
+    },
+    {
+      "target_date": "10/16/2022",
+      "week": 41,
+      "day_week": "41_7",
+      "consumption_average": 50000.4166666667,
+      "year": 2015
+    },
+    {
+      "target_date": "10/16/2022",
+      "week": 41,
+      "day_week": "41_7",
+      "consumption_average": 55960.4166666667,
+      "year": 2016
+    },
+    {
+      "target_date": "10/16/2022",
+      "week": 41,
+      "day_week": "41_7",
+      "consumption_average": 50172.9166666667,
+      "year": 2017
+    },
+    {
+      "target_date": "10/16/2022",
+      "week": 41,
+      "day_week": "41_7",
+      "consumption_average": 48556.25,
+      "year": 2018
+    },
+    {
+      "target_date": "10/16/2022",
+      "week": 41,
+      "day_week": "41_7",
+      "consumption_average": 48835.8333333333,
+      "year": 2019
+    },
+    {
+      "target_date": "10/16/2022",
+      "week": 41,
+      "day_week": "41_7",
+      "consumption_average": 50488.75,
+      "year": 2020
+    },
+    {
+      "target_date": "10/16/2022",
+      "week": 41,
+      "day_week": "41_7",
+      "consumption_average": 51518.75,
+      "year": 2021
+    },
+    {
+      "target_date": "10/23/2022",
+      "week": 42,
+      "day_week": "42_7",
+      "year": 2013
+    },
+    {
+      "target_date": "10/23/2022",
+      "week": 42,
+      "day_week": "42_7",
+      "consumption_average": 49857.0833333333,
+      "year": 2014
+    },
+    {
+      "target_date": "10/23/2022",
+      "week": 42,
+      "day_week": "42_7",
+      "consumption_average": 57140.4166666667,
+      "year": 2015
+    },
+    {
+      "target_date": "10/23/2022",
+      "week": 42,
+      "day_week": "42_7",
+      "consumption_average": 54767.9166666667,
+      "year": 2016
+    },
+    {
+      "target_date": "10/23/2022",
+      "week": 42,
+      "day_week": "42_7",
+      "consumption_average": 49072.9166666667,
+      "year": 2017
+    },
+    {
+      "target_date": "10/23/2022",
+      "week": 42,
+      "day_week": "42_7",
+      "consumption_average": 48094.5833333333,
+      "year": 2018
+    },
+    {
+      "target_date": "10/23/2022",
+      "week": 42,
+      "day_week": "42_7",
+      "consumption_average": 48531.6666666667,
+      "year": 2019
+    },
+    {
+      "target_date": "10/23/2022",
+      "week": 42,
+      "day_week": "42_7",
+      "consumption_average": 55700,
+      "year": 2020
+    },
+    {
+      "target_date": "10/23/2022",
+      "week": 42,
+      "day_week": "42_7",
+      "consumption_average": 50459.1666666667,
+      "year": 2021
+    },
+    {
+      "target_date": "10/30/2022",
+      "week": 43,
+      "day_week": "43_7",
+      "year": 2013
+    },
+    {
+      "target_date": "10/30/2022",
+      "week": 43,
+      "day_week": "43_7",
+      "consumption_average": 51049.1666666667,
+      "year": 2014
+    },
+    {
+      "target_date": "10/30/2022",
+      "week": 43,
+      "day_week": "43_7",
+      "consumption_average": 57724.5833333333,
+      "year": 2015
+    },
+    {
+      "target_date": "10/30/2022",
+      "week": 43,
+      "day_week": "43_7",
+      "consumption_average": 55139.5833333333,
+      "year": 2016
+    },
+    {
+      "target_date": "10/30/2022",
+      "week": 43,
+      "day_week": "43_7",
+      "consumption_average": 51629.5833333333,
+      "year": 2017
+    },
+    {
+      "target_date": "10/30/2022",
+      "week": 43,
+      "day_week": "43_7",
+      "consumption_average": 51687.5,
+      "year": 2018
+    },
+    {
+      "target_date": "10/30/2022",
+      "week": 43,
+      "day_week": "43_7",
+      "consumption_average": 51237.0833333333,
+      "year": 2019
+    },
+    {
+      "target_date": "10/30/2022",
+      "week": 43,
+      "day_week": "43_7",
+      "consumption_average": 52530.4166666667,
+      "year": 2020
+    },
+    {
+      "target_date": "10/30/2022",
+      "week": 43,
+      "day_week": "43_7",
+      "consumption_average": 52652.0833333333,
+      "year": 2021
+    },
+    {
+      "target_date": "11/06/2022",
+      "week": 44,
+      "day_week": "44_7",
+      "year": 2013
+    },
+    {
+      "target_date": "11/06/2022",
+      "week": 44,
+      "day_week": "44_7",
+      "consumption_average": 51886.4583333333,
+      "year": 2014
+    },
+    {
+      "target_date": "11/06/2022",
+      "week": 44,
+      "day_week": "44_7",
+      "consumption_average": 54330.2083333333,
+      "year": 2015
+    },
+    {
+      "target_date": "11/06/2022",
+      "week": 44,
+      "day_week": "44_7",
+      "consumption_average": 57617.7083333333,
+      "year": 2016
+    },
+    {
+      "target_date": "11/06/2022",
+      "week": 44,
+      "day_week": "44_7",
+      "consumption_average": 54943.0555555556,
+      "year": 2017
+    },
+    {
+      "target_date": "11/06/2022",
+      "week": 44,
+      "day_week": "44_7",
+      "consumption_average": 60327.7777777778,
+      "year": 2018
+    },
+    {
+      "target_date": "11/06/2022",
+      "week": 44,
+      "day_week": "44_7",
+      "consumption_average": 53200.6944444444,
+      "year": 2019
+    },
+    {
+      "target_date": "11/06/2022",
+      "week": 44,
+      "day_week": "44_7",
+      "consumption_average": 53086.9791666667,
+      "year": 2020
+    },
+    {
+      "target_date": "11/06/2022",
+      "week": 44,
+      "day_week": "44_7",
+      "consumption_average": 59152.7777777778,
+      "year": 2021
+    },
+    {
+      "target_date": "11/13/2022",
+      "week": 45,
+      "day_week": "45_7",
+      "year": 2013
+    },
+    {
+      "target_date": "11/13/2022",
+      "week": 45,
+      "day_week": "45_7",
+      "consumption_average": 56580.7291666667,
+      "year": 2014
+    },
+    {
+      "target_date": "11/13/2022",
+      "week": 45,
+      "day_week": "45_7",
+      "consumption_average": 55058.8541666667,
+      "year": 2015
+    },
+    {
+      "target_date": "11/13/2022",
+      "week": 45,
+      "day_week": "45_7",
+      "consumption_average": 66097.3958333333,
+      "year": 2016
+    },
+    {
+      "target_date": "11/13/2022",
+      "week": 45,
+      "day_week": "45_7",
+      "consumption_average": 63881.7708333333,
+      "year": 2017
+    },
+    {
+      "target_date": "11/13/2022",
+      "week": 45,
+      "day_week": "45_7",
+      "consumption_average": 57628.6458333333,
+      "year": 2018
+    },
+    {
+      "target_date": "11/13/2022",
+      "week": 45,
+      "day_week": "45_7",
+      "consumption_average": 56653.6458333333,
+      "year": 2019
+    },
+    {
+      "target_date": "11/13/2022",
+      "week": 45,
+      "day_week": "45_7",
+      "consumption_average": 54560.4166666667,
+      "year": 2020
+    },
+    {
+      "target_date": "11/13/2022",
+      "week": 45,
+      "day_week": "45_7",
+      "consumption_average": 61928.4722222222,
+      "year": 2021
+    },
+    {
+      "target_date": "11/20/2022",
+      "week": 46,
+      "day_week": "46_7",
+      "year": 2013
+    },
+    {
+      "target_date": "11/20/2022",
+      "week": 46,
+      "day_week": "46_7",
+      "consumption_average": 57605.7291666667,
+      "year": 2014
+    },
+    {
+      "target_date": "11/20/2022",
+      "week": 46,
+      "day_week": "46_7",
+      "consumption_average": 53267.1875,
+      "year": 2015
+    },
+    {
+      "target_date": "11/20/2022",
+      "week": 46,
+      "day_week": "46_7",
+      "consumption_average": 62924.5833333333,
+      "year": 2016
+    },
+    {
+      "target_date": "11/20/2022",
+      "week": 46,
+      "day_week": "46_7",
+      "consumption_average": 65575.4166666667,
+      "year": 2017
+    },
+    {
+      "target_date": "11/20/2022",
+      "week": 46,
+      "day_week": "46_7",
+      "consumption_average": 57086.25,
+      "year": 2018
+    },
+    {
+      "target_date": "11/20/2022",
+      "week": 46,
+      "day_week": "46_7",
+      "consumption_average": 66770.3125,
+      "year": 2019
+    },
+    {
+      "target_date": "11/20/2022",
+      "week": 46,
+      "day_week": "46_7",
+      "consumption_average": 52506.7708333333,
+      "year": 2020
+    },
+    {
+      "target_date": "11/20/2022",
+      "week": 46,
+      "day_week": "46_7",
+      "consumption_average": 61883.75,
+      "year": 2021
+    },
+    {
+      "target_date": "11/27/2022",
+      "week": 47,
+      "day_week": "47_7",
+      "year": 2013
+    },
+    {
+      "target_date": "11/27/2022",
+      "week": 47,
+      "day_week": "47_7",
+      "consumption_average": 61303.3333333333,
+      "year": 2014
+    },
+    {
+      "target_date": "11/27/2022",
+      "week": 47,
+      "day_week": "47_7",
+      "consumption_average": 55536.6666666667,
+      "year": 2015
+    },
+    {
+      "target_date": "11/27/2022",
+      "week": 47,
+      "day_week": "47_7",
+      "consumption_average": 60800.4166666667,
+      "year": 2016
+    },
+    {
+      "target_date": "11/27/2022",
+      "week": 47,
+      "day_week": "47_7",
+      "consumption_average": 62287.9166666667,
+      "year": 2017
+    },
+    {
+      "target_date": "11/27/2022",
+      "week": 47,
+      "day_week": "47_7",
+      "consumption_average": 69637.0833333333,
+      "year": 2018
+    },
+    {
+      "target_date": "11/27/2022",
+      "week": 47,
+      "day_week": "47_7",
+      "consumption_average": 68476.6666666667,
+      "year": 2019
+    },
+    {
+      "target_date": "11/27/2022",
+      "week": 47,
+      "day_week": "47_7",
+      "consumption_average": 56147.5,
+      "year": 2020
+    },
+    {
+      "target_date": "11/27/2022",
+      "week": 47,
+      "day_week": "47_7",
+      "consumption_average": 67138.3333333333,
+      "year": 2021
+    },
+    {
+      "target_date": "12/04/2022",
+      "week": 48,
+      "day_week": "48_7",
+      "year": 2013
+    },
+    {
+      "target_date": "12/04/2022",
+      "week": 48,
+      "day_week": "48_7",
+      "consumption_average": 58566.25,
+      "year": 2014
+    },
+    {
+      "target_date": "12/04/2022",
+      "week": 48,
+      "day_week": "48_7",
+      "consumption_average": 68042.0833333333,
+      "year": 2015
+    },
+    {
+      "target_date": "12/04/2022",
+      "week": 48,
+      "day_week": "48_7",
+      "consumption_average": 71466.6666666667,
+      "year": 2016
+    },
+    {
+      "target_date": "12/04/2022",
+      "week": 48,
+      "day_week": "48_7",
+      "consumption_average": 71350.8333333333,
+      "year": 2017
+    },
+    {
+      "target_date": "12/04/2022",
+      "week": 48,
+      "day_week": "48_7",
+      "consumption_average": 65386.25,
+      "year": 2018
+    },
+    {
+      "target_date": "12/04/2022",
+      "week": 48,
+      "day_week": "48_7",
+      "consumption_average": 60734.5833333333,
+      "year": 2019
+    },
+    {
+      "target_date": "12/04/2022",
+      "week": 48,
+      "day_week": "48_7",
+      "consumption_average": 62426.25,
+      "year": 2020
+    },
+    {
+      "target_date": "12/04/2022",
+      "week": 48,
+      "day_week": "48_7",
+      "consumption_average": 71215,
+      "year": 2021
+    },
+    {
+      "target_date": "12/11/2022",
+      "week": 49,
+      "day_week": "49_7",
+      "year": 2013
+    },
+    {
+      "target_date": "12/11/2022",
+      "week": 49,
+      "day_week": "49_7",
+      "consumption_average": 68186.25,
+      "year": 2014
+    },
+    {
+      "target_date": "12/11/2022",
+      "week": 49,
+      "day_week": "49_7",
+      "consumption_average": 63751.6666666667,
+      "year": 2015
+    },
+    {
+      "target_date": "12/11/2022",
+      "week": 49,
+      "day_week": "49_7",
+      "consumption_average": 70267.0833333333,
+      "year": 2016
+    },
+    {
+      "target_date": "12/11/2022",
+      "week": 49,
+      "day_week": "49_7",
+      "consumption_average": 73357.5,
+      "year": 2017
+    },
+    {
+      "target_date": "12/11/2022",
+      "week": 49,
+      "day_week": "49_7",
+      "consumption_average": 59510.4166666667,
+      "year": 2018
+    },
+    {
+      "target_date": "12/11/2022",
+      "week": 49,
+      "day_week": "49_7",
+      "consumption_average": 71802.5,
+      "year": 2019
+    },
+    {
+      "target_date": "12/11/2022",
+      "week": 49,
+      "day_week": "49_7",
+      "consumption_average": 67633.75,
+      "year": 2020
+    },
+    {
+      "target_date": "12/11/2022",
+      "week": 49,
+      "day_week": "49_7",
+      "consumption_average": 70684.1666666667,
+      "year": 2021
+    },
+    {
+      "target_date": "12/18/2022",
+      "week": 50,
+      "day_week": "50_7",
+      "year": 2013
+    },
+    {
+      "target_date": "12/18/2022",
+      "week": 50,
+      "day_week": "50_7",
+      "consumption_average": 69732.5,
+      "year": 2014
+    },
+    {
+      "target_date": "12/18/2022",
+      "week": 50,
+      "day_week": "50_7",
+      "consumption_average": 64657.5,
+      "year": 2015
+    },
+    {
+      "target_date": "12/18/2022",
+      "week": 50,
+      "day_week": "50_7",
+      "consumption_average": 68945.4166666667,
+      "year": 2016
+    },
+    {
+      "target_date": "12/18/2022",
+      "week": 50,
+      "day_week": "50_7",
+      "consumption_average": 71390.4166666667,
+      "year": 2017
+    },
+    {
+      "target_date": "12/18/2022",
+      "week": 50,
+      "day_week": "50_7",
+      "consumption_average": 70516.25,
+      "year": 2018
+    },
+    {
+      "target_date": "12/18/2022",
+      "week": 50,
+      "day_week": "50_7",
+      "consumption_average": 68066.6666666667,
+      "year": 2019
+    },
+    {
+      "target_date": "12/18/2022",
+      "week": 50,
+      "day_week": "50_7",
+      "consumption_average": 70845.8333333333,
+      "year": 2020
+    },
+    {
+      "target_date": "12/18/2022",
+      "week": 50,
+      "day_week": "50_7",
+      "consumption_average": 68502.5,
+      "year": 2021
+    },
+    {
+      "target_date": "01/08/2023",
+      "week": 1,
+      "day_week": "1_7",
+      "year": 2013
+    },
+    {
+      "target_date": "01/08/2023",
+      "week": 1,
+      "day_week": "1_7",
+      "consumption_average": 63345.3125,
+      "year": 2014
+    },
+    {
+      "target_date": "01/08/2023",
+      "week": 1,
+      "day_week": "1_7",
+      "consumption_average": 70815.1041666667,
+      "year": 2015
+    },
+    {
+      "target_date": "01/08/2023",
+      "week": 1,
+      "day_week": "1_7",
+      "consumption_average": 66800.6944444445,
+      "year": 2016
+    },
+    {
+      "target_date": "01/08/2023",
+      "week": 1,
+      "day_week": "1_7",
+      "consumption_average": 78615.8333333333,
+      "year": 2017
+    },
+    {
+      "target_date": "01/08/2023",
+      "week": 1,
+      "day_week": "1_7",
+      "consumption_average": 67673.75,
+      "year": 2018
+    },
+    {
+      "target_date": "01/08/2023",
+      "week": 1,
+      "day_week": "1_7",
+      "consumption_average": 73847.9166666667,
+      "year": 2019
+    },
+    {
+      "target_date": "01/08/2023",
+      "week": 1,
+      "day_week": "1_7",
+      "consumption_average": 78051.5625,
+      "year": 2020
+    },
+    {
+      "target_date": "01/08/2023",
+      "week": 1,
+      "day_week": "1_7",
+      "consumption_average": 68007.2916666667,
+      "year": 2021
+    },
+    {
+      "target_date": "01/15/2023",
+      "week": 2,
+      "day_week": "2_7",
+      "year": 2013
+    },
+    {
+      "target_date": "01/15/2023",
+      "week": 2,
+      "day_week": "2_7",
+      "consumption_average": 63280.8333333333,
+      "year": 2014
+    },
+    {
+      "target_date": "01/15/2023",
+      "week": 2,
+      "day_week": "2_7",
+      "consumption_average": 71405.4166666667,
+      "year": 2015
+    },
+    {
+      "target_date": "01/15/2023",
+      "week": 2,
+      "day_week": "2_7",
+      "consumption_average": 69855.4166666667,
+      "year": 2016
+    },
+    {
+      "target_date": "01/15/2023",
+      "week": 2,
+      "day_week": "2_7",
+      "consumption_average": 73919.1666666667,
+      "year": 2017
+    },
+    {
+      "target_date": "01/15/2023",
+      "week": 2,
+      "day_week": "2_7",
+      "consumption_average": 67673.75,
+      "year": 2018
+    },
+    {
+      "target_date": "01/15/2023",
+      "week": 2,
+      "day_week": "2_7",
+      "consumption_average": 74315.8333333333,
+      "year": 2019
+    },
+    {
+      "target_date": "01/15/2023",
+      "week": 2,
+      "day_week": "2_7",
+      "consumption_average": 74320.8333333333,
+      "year": 2020
+    },
+    {
+      "target_date": "01/15/2023",
+      "week": 2,
+      "day_week": "2_7",
+      "consumption_average": 74010.4166666667,
+      "year": 2021
+    },
+    {
+      "target_date": "01/22/2023",
+      "week": 3,
+      "day_week": "3_7",
+      "year": 2013
+    },
+    {
+      "target_date": "01/22/2023",
+      "week": 3,
+      "day_week": "3_7",
+      "consumption_average": 67757.5,
+      "year": 2014
+    },
+    {
+      "target_date": "01/22/2023",
+      "week": 3,
+      "day_week": "3_7",
+      "consumption_average": 67430.4166666667,
+      "year": 2015
+    },
+    {
+      "target_date": "01/22/2023",
+      "week": 3,
+      "day_week": "3_7",
+      "consumption_average": 77640.4166666667,
+      "year": 2016
+    },
+    {
+      "target_date": "01/22/2023",
+      "week": 3,
+      "day_week": "3_7",
+      "consumption_average": 82986.6666666667,
+      "year": 2017
+    },
+    {
+      "target_date": "01/22/2023",
+      "week": 3,
+      "day_week": "3_7",
+      "consumption_average": 68247.5,
+      "year": 2018
+    },
+    {
+      "target_date": "01/22/2023",
+      "week": 3,
+      "day_week": "3_7",
+      "consumption_average": 70736.6666666667,
+      "year": 2019
+    },
+    {
+      "target_date": "01/22/2023",
+      "week": 3,
+      "day_week": "3_7",
+      "consumption_average": 70255,
+      "year": 2020
+    },
+    {
+      "target_date": "01/22/2023",
+      "week": 3,
+      "day_week": "3_7",
+      "consumption_average": 74212.0833333333,
+      "year": 2021
+    },
+    {
+      "target_date": "01/29/2023",
+      "week": 4,
+      "day_week": "4_7",
+      "year": 2013
+    },
+    {
+      "target_date": "01/29/2023",
+      "week": 4,
+      "day_week": "4_7",
+      "consumption_average": 70880.8333333333,
+      "year": 2014
+    },
+    {
+      "target_date": "01/29/2023",
+      "week": 4,
+      "day_week": "4_7",
+      "consumption_average": 76680,
+      "year": 2015
+    },
+    {
+      "target_date": "01/29/2023",
+      "week": 4,
+      "day_week": "4_7",
+      "consumption_average": 65192.0833333333,
+      "year": 2016
+    },
+    {
+      "target_date": "01/29/2023",
+      "week": 4,
+      "day_week": "4_7",
+      "consumption_average": 82725.8333333333,
+      "year": 2017
+    },
+    {
+      "target_date": "01/29/2023",
+      "week": 4,
+      "day_week": "4_7",
+      "consumption_average": 64086.6666666667,
+      "year": 2018
+    },
+    {
+      "target_date": "01/29/2023",
+      "week": 4,
+      "day_week": "4_7",
+      "consumption_average": 77970.8333333333,
+      "year": 2019
+    },
+    {
+      "target_date": "01/29/2023",
+      "week": 4,
+      "day_week": "4_7",
+      "consumption_average": 70125.4166666667,
+      "year": 2020
+    },
+    {
+      "target_date": "01/29/2023",
+      "week": 4,
+      "day_week": "4_7",
+      "consumption_average": 75807.0833333333,
+      "year": 2021
+    },
+    {
+      "target_date": "02/05/2023",
+      "week": 5,
+      "day_week": "5_7",
+      "year": 2013
+    },
+    {
+      "target_date": "02/05/2023",
+      "week": 5,
+      "day_week": "5_7",
+      "consumption_average": 71697.0833333333,
+      "year": 2014
+    },
+    {
+      "target_date": "02/05/2023",
+      "week": 5,
+      "day_week": "5_7",
+      "consumption_average": 73807.0833333333,
+      "year": 2015
+    },
+    {
+      "target_date": "02/05/2023",
+      "week": 5,
+      "day_week": "5_7",
+      "consumption_average": 64196.6666666667,
+      "year": 2016
+    },
+    {
+      "target_date": "02/05/2023",
+      "week": 5,
+      "day_week": "5_7",
+      "consumption_average": 66821.25,
+      "year": 2017
+    },
+    {
+      "target_date": "02/05/2023",
+      "week": 5,
+      "day_week": "5_7",
+      "consumption_average": 67556.6666666667,
+      "year": 2018
+    },
+    {
+      "target_date": "02/05/2023",
+      "week": 5,
+      "day_week": "5_7",
+      "consumption_average": 75309.1666666667,
+      "year": 2019
+    },
+    {
+      "target_date": "02/05/2023",
+      "week": 5,
+      "day_week": "5_7",
+      "consumption_average": 62299.1666666667,
+      "year": 2020
+    },
+    {
+      "target_date": "02/05/2023",
+      "week": 5,
+      "day_week": "5_7",
+      "consumption_average": 67469.5833333333,
+      "year": 2021
+    },
+    {
+      "target_date": "02/12/2023",
+      "week": 6,
+      "day_week": "6_7",
+      "year": 2013
+    },
+    {
+      "target_date": "02/12/2023",
+      "week": 6,
+      "day_week": "6_7",
+      "consumption_average": 68986.6666666667,
+      "year": 2014
+    },
+    {
+      "target_date": "02/12/2023",
+      "week": 6,
+      "day_week": "6_7",
+      "consumption_average": 80115.8333333333,
+      "year": 2015
+    },
+    {
+      "target_date": "02/12/2023",
+      "week": 6,
+      "day_week": "6_7",
+      "consumption_average": 67747.5,
+      "year": 2016
+    },
+    {
+      "target_date": "02/12/2023",
+      "week": 6,
+      "day_week": "6_7",
+      "consumption_average": 71047.9166666667,
+      "year": 2017
+    },
+    {
+      "target_date": "02/12/2023",
+      "week": 6,
+      "day_week": "6_7",
+      "consumption_average": 78698.75,
+      "year": 2018
+    },
+    {
+      "target_date": "02/12/2023",
+      "week": 6,
+      "day_week": "6_7",
+      "consumption_average": 72383.3333333333,
+      "year": 2019
+    },
+    {
+      "target_date": "02/12/2023",
+      "week": 6,
+      "day_week": "6_7",
+      "consumption_average": 75690.8333333333,
+      "year": 2020
+    },
+    {
+      "target_date": "02/12/2023",
+      "week": 6,
+      "day_week": "6_7",
+      "consumption_average": 65474.5833333333,
+      "year": 2021
+    },
+    {
+      "target_date": "02/19/2023",
+      "week": 7,
+      "day_week": "7_7",
+      "year": 2013
+    },
+    {
+      "target_date": "02/19/2023",
+      "week": 7,
+      "day_week": "7_7",
+      "consumption_average": 68789.1666666667,
+      "year": 2014
+    },
+    {
+      "target_date": "02/19/2023",
+      "week": 7,
+      "day_week": "7_7",
+      "consumption_average": 74208.75,
+      "year": 2015
+    },
+    {
+      "target_date": "02/19/2023",
+      "week": 7,
+      "day_week": "7_7",
+      "consumption_average": 72664.5833333333,
+      "year": 2016
+    },
+    {
+      "target_date": "02/19/2023",
+      "week": 7,
+      "day_week": "7_7",
+      "consumption_average": 64857.0833333333,
+      "year": 2017
+    },
+    {
+      "target_date": "02/19/2023",
+      "week": 7,
+      "day_week": "7_7",
+      "consumption_average": 73682.0833333333,
+      "year": 2018
+    },
+    {
+      "target_date": "02/19/2023",
+      "week": 7,
+      "day_week": "7_7",
+      "consumption_average": 69327.5,
+      "year": 2019
+    },
+    {
+      "target_date": "02/19/2023",
+      "week": 7,
+      "day_week": "7_7",
+      "consumption_average": 66272.5,
+      "year": 2020
+    },
+    {
+      "target_date": "02/19/2023",
+      "week": 7,
+      "day_week": "7_7",
+      "consumption_average": 62101.6666666667,
+      "year": 2021
+    }
+  ]
+}
