@@ -1,6 +1,7 @@
 import {Chart} from "chart.js";
 import {ConfigOptions, ConfigOptionsAxesX, ConfigOptionsLegend} from "./type";
 import dataItems from "../data/db_update.json";
+import {animation} from "./animation";
 
 const DISPLAY = true;
 const BORDER = true;
@@ -39,54 +40,22 @@ const plugin = {
 	}
 };
 //add label axes X label weeks
-
 // chartJs config
 export const datavizConfig = [
 	{
 		options: {
 			responsive: true,
 			onClick: (indexValue: any) => indexValue,
-			animations: {
-				tension: {
-					duration: 1000,
-					easing: "easeInSine",
-					from: 2,
-					to: 0.3,
-					loop: false
-				}
-			},
-			animation: {
-				onprogress: (context: {
-					chart: {};
-					initProgress: {value: 0};
-					progress: {value: number};
-					initial: boolean;
-					numSteps: number;
-					currentStep: number;
-				}) => {
-					let value = 15;
-					if (context.initial) {
-						value = context.currentStep / context.numSteps;
-					} else {
-						value = context.currentStep / context.numSteps;
-					}
-				}
-			},
+			animation,
 			plugins: {
 				customCanvasBackgroundColor: {
 					color: "lightGreen"
 				},
 				events: ["click"],
-				title: {
-					display: true,
-					text: "",
-					callbacks: {
-						label: (context: {}) => console.log(context, "context")
-					}
-				},
 				tooltip: {
 					callbacks: {
 						label: (context: ConfigOptions) => {
+							// console.log(context, "legent");
 							if (context.dataIndex === 0) {
 								return (context.label = "" + context.formattedValue);
 							}
@@ -100,11 +69,17 @@ export const datavizConfig = [
 					display: true,
 					labels: {
 						filter: (legendItem: ConfigOptionsLegend) => {
-							if (legendItem.datasetIndex === 0) {
+							if (legendItem.text === "Consommation années 2014 - 2019") {
 								return (legendItem.fontColor = "rgb(0,0,0)");
 							}
-							if (legendItem.datasetIndex === 1) {
+							if (legendItem.text === "") {
+								return (legendItem.fontColor = "");
+							}
+							if (legendItem.text === "Consommation corrigée 2022") {
 								return (legendItem.fontColor = "rgb(173, 52, 4)");
+							}
+							if (legendItem.text === "Consommation realisée 2022") {
+								return (legendItem.fontColor = "rgb(214, 19, 19)");
 							}
 						},
 						boxWidth: 0,
@@ -118,7 +93,6 @@ export const datavizConfig = [
 				x: {
 					labels: (context: {scale: ConfigOptionsAxesX}) => {
 						if (context.scale.ticks) {
-							console.log(context.scale.ticks, "context");
 							return monthLabelX.map((week) => {
 								return week.semaine;
 							});
