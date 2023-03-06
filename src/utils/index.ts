@@ -1,10 +1,18 @@
-import {Scale, Chart} from "chart.js";
-import {ConfigOptions} from "./type";
+import {Chart} from "chart.js";
+import {ConfigOptions, ConfigOptionsAxesX, ConfigOptionsLegend} from "./type";
+import dataItems from "../data/db_update.json";
 
 const DISPLAY = true;
 const BORDER = true;
 const CHART_AREA = false;
 const TICKS = true;
+console.log(dataItems, "dataItems");
+
+const monthLabelX = dataItems.data.filter((month) => {
+	if (month.Mois) {
+		return month.Mois;
+	}
+});
 
 export const labels = ["Oct", "Nov", "Dec", "Jan", "Fev", "Mars"];
 
@@ -30,8 +38,9 @@ const plugin = {
 		ctx.restore();
 	}
 };
-// chartJs config
+//add label axes X label weeks
 
+// chartJs config
 export const datavizConfig = [
 	{
 		options: {
@@ -88,28 +97,31 @@ export const datavizConfig = [
 					}
 				},
 				legend: {
-					display: false,
-					usePointStyle: false,
-					labels: false
+					display: true,
+					labels: {
+						filter: (legendItem: ConfigOptionsLegend) => {
+							if (legendItem.datasetIndex === 0) {
+								return (legendItem.fontColor = "rgb(0,0,0)");
+							}
+							if (legendItem.datasetIndex === 1) {
+								return (legendItem.fontColor = "rgb(173, 52, 4)");
+							}
+						},
+						boxWidth: 0,
+						boxHeight: 0,
+						padding: 15
+					},
+					position: "right"
 				}
 			},
 			scale: {
 				x: {
-					grid: {
-						display: DISPLAY,
-						drawBorder: BORDER,
-						drawOnChartArea: CHART_AREA,
-						drawTicks: TICKS
-					},
-					gridLines: {
-						borderDash: [8, 4],
-						display: DISPLAY
-					},
-					linear: {
-						ticks: {
-							callback: {
-								label: (context: any) => context
-							}
+					labels: (context: {scale: ConfigOptionsAxesX}) => {
+						if (context.scale.ticks) {
+							console.log(context.scale.ticks, "context");
+							return monthLabelX.map((week) => {
+								return week.semaine;
+							});
 						}
 					}
 				},
