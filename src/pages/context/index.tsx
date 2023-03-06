@@ -11,6 +11,9 @@ export interface IdataResponse {
 	conso_realisee: number;
 	conso_condNormaleTemp: number;
 	conso_moyAnneePrec: number;
+	Annee: number;
+	Mois: number;
+	semaine: string;
 }
 export interface IdataViz2022 {
 	Annee: number;

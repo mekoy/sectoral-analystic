@@ -1,5 +1,4 @@
 {
-"parser": "@typescript-eslint/parser",
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -8,6 +7,9 @@
       "esnext"
     ],
     "baseUrl": "src",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,9 +22,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "types": [ "@types/webrtc" ]
   },
   "include": [
     "src"
-  ]
+  ], "exclude": [
+    "node_modules"
+]
 }

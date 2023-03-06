@@ -27,8 +27,8 @@ const App: React.FC<{}> = () => {
 	};
 
 	const components = [
-		<DataVizModuleDefault dataApi={[]} />,
-		<DataVizConsumption2022 dataApi={dataFetch} />,
+		// <DataVizModuleDefault dataApi={[]} />,
+		// <DataVizConsumption2022 dataApi={dataFetch} />,
 		<DataVizModule20142019 dataApi={dataFetch} />
 	];
 
