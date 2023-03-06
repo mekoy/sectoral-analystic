@@ -7,7 +7,8 @@ import {
 	LineElement,
 	Title,
 	Tooltip,
-	Legend
+	Legend,
+	Filler
 } from "chart.js";
 import {Line} from "react-chartjs-2";
 
@@ -26,10 +27,11 @@ export interface IpPropsDataset {
 	datasets: {
 		label: string;
 		data: number[];
-		borderColor: string;
-		backgroundColor: string;
+		borderColor?: string;
+		backgroundColor?: string;
 		fill?: boolean;
 		opacity?: number;
+		hidden?: boolean
 	}[];
 }
 
@@ -40,7 +42,8 @@ ChartJS.register(
 	LineElement,
 	Title,
 	Tooltip,
-	Legend
+	Legend,
+	Filler
 );
 
 const LineChart: React.FC<LineChartProps> = ({
