@@ -54,40 +54,6 @@ const ConsoThisWinter: React.FC<IDataVizGlobal> = ({ dataApi }) => {
     ],
   };
 
-  const options = {
-    responsive: true,
-    // interaction: {
-    //   mode: "index" as const,
-    //   intersect: false,
-    // },
-    // stacked: false,
-    plugins: {
-      title: {
-        display: true,
-        text: conso_realized,
-      },
-      legend: {
-        display: false,
-        usePointStyle: false,
-        labels: false,
-      },
-    },
-    animation: {
-      duration: 3000,
-      easing: "easeOutQuart",
-    },
-    scales: {
-      // x: {
-      //   min: 1,
-      //   max: 52,
-      // },
-      y: {
-        min: 40000,
-        max: 52000,
-      },
-    },
-  };
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSecondLine(true);
