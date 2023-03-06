@@ -70,7 +70,7 @@ export const datavizConfig = [
 				events: ["click"],
 				title: {
 					display: true,
-					text: "Consommation attendu 2014 - 2019",
+					text: "",
 					callbacks: {
 						label: (context: {}) => console.log(context, "context")
 					}

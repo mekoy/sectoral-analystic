@@ -8,26 +8,28 @@ import {BsChevronRight, BsChevronLeft} from "react-icons/bs";
 import {ICurvesConsoContextType, useCurvesConsoContext} from "pages/context";
 import DataVizModule20142019 from "modules/DataVizConso-2014-2019";
 import DataVizConsumption2022 from "modules/DataVizConso-2022";
+import DataVizModuleDefault from "modules/DataVizConso-default";
 
 const App: React.FC<{}> = () => {
 	const {dataFetch}: ICurvesConsoContextType = useCurvesConsoContext();
 	const [componentIndex, setComponentIndex] = useState(0);
 
 	const nextComponent = () => {
-		setComponentIndex((prevIndex) =>
+		setComponentIndex((prevIndex: number) =>
 			prevIndex === components.length - 1 ? 0 : prevIndex + 1
 		);
 	};
 
 	const prevComponent = () => {
-		setComponentIndex((prevIndex) =>
+		setComponentIndex((prevIndex: number) =>
 			prevIndex === 0 ? components.length - 1 : prevIndex - 1
 		);
 	};
 
 	const components = [
-		<DataVizModule20142019 dataApi={dataFetch} />,
-		<DataVizConsumption2022 dataApi={dataFetch} />
+		<DataVizModuleDefault dataApi={[]} />,
+		<DataVizConsumption2022 dataApi={dataFetch} />,
+		<DataVizModule20142019 dataApi={dataFetch} />
 	];
 
 	return (
