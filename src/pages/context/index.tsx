@@ -8,18 +8,9 @@ export type ICurvesConsoContextType = {
 	yearsList: {label: string; year: number}[];
 };
 export interface IdataResponse {
-	climat: number;
-	consumption_average: number;
 	conso_realisee: number;
-	consumption_moy: number;
-	consumption_norm_2022: number;
-	consumption_norm_moy: number;
-	day_week: string;
-	sobriety: number;
-	target_date: string;
-	week: number;
-	year: number;
-	data_annee_2022: IdataViz2022[];
+	conso_condNormaleTemp: number;
+	conso_moyAnneePrec: number;
 }
 export interface IdataViz2022 {
 	Annee: number;
@@ -30,9 +21,7 @@ export interface IdataViz2022 {
 	conso_moyAnneePrec: number;
 }
 export interface IdataViz20142019 {
-	consumption_norm_moy: number;
-	week: number;
-	year: number;
+	conso_moyAnneePrec: number;
 }
 
 interface Props {
