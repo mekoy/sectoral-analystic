@@ -27,10 +27,11 @@ export interface IpPropsDataset {
 	datasets: {
 		label: string;
 		data: number[];
-		borderColor: string;
-		backgroundColor: string;
+		borderColor?: string;
+		backgroundColor?: string;
 		fill?: boolean;
 		opacity?: number;
+		hidden?: boolean
 	}[];
 }
 

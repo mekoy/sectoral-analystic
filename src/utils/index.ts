@@ -1,5 +1,5 @@
-import {Chart} from "chart.js";
-import {ConfigOptions, ConfigOptionsAxesX, ConfigOptionsLegend} from "./type";
+import { Chart } from "chart.js";
+import { ConfigOptions, ConfigOptionsAxesX, ConfigOptionsLegend } from "./type";
 import dataItems from "../data/db_update.json";
 import {animation} from "./animation";
 
@@ -10,34 +10,34 @@ const TICKS = true;
 console.log(dataItems, "dataItems");
 
 const monthLabelX = dataItems.data.filter((month) => {
-	if (month.Mois) {
-		return month.Mois;
-	}
+  if (month.Mois) {
+    return month.Mois;
+  }
 });
 
 export const labels = ["Oct", "Nov", "Dec", "Jan", "Fev", "Mars"];
 
 //get years for Data
-export const yearsFull = (back: number): {label: string; year: number}[] => {
-	const year: number = new Date().getFullYear();
-	return Array.from({length: back}, (v: number, i: number) => {
-		return {
-			label: "year",
-			year: year - back + i - 3
-		};
-	});
+export const yearsFull = (back: number): { label: string; year: number }[] => {
+  const year: number = new Date().getFullYear();
+  return Array.from({ length: back }, (v: number, i: number) => {
+    return {
+      label: "year",
+      year: year - back + i - 3,
+    };
+  });
 };
 const plugin = {
-	id: "customCanvasBackgroundColor",
-	beforeDraw: (chart: Chart, args: any, options: {color: "#000"}) => {
-		const {ctx} = chart;
-		console.log(ctx, "ctx");
-		ctx.save();
-		ctx.globalCompositeOperation = "destination-over";
-		ctx.fillStyle = options.color || "#b65555";
-		ctx.fillRect(0, 0, chart.width, chart.height);
-		ctx.restore();
-	}
+  id: "customCanvasBackgroundColor",
+  beforeDraw: (chart: Chart, args: any, options: { color: "#000" }) => {
+    const { ctx } = chart;
+    console.log(ctx, "ctx");
+    ctx.save();
+    ctx.globalCompositeOperation = "destination-over";
+    ctx.fillStyle = options.color || "#b65555";
+    ctx.fillRect(0, 0, chart.width, chart.height);
+    ctx.restore();
+  },
 };
 //add label axes X label weeks
 // chartJs config
