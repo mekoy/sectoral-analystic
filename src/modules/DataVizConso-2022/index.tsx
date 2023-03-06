@@ -43,44 +43,7 @@ const DataVizConsumption2022: React.FC<IDataVizGlobal> = ({ dataApi }) => {
       },
     ],
   };
-
-  let delayed: boolean;
-  // const options = {
-  // 	type: "line",
-  // 	data: data,
-  // 	options: {
-  // 		responsive: true,
-  // 		interaction: {
-  // 			mode: "index" as const,
-  // 			intersect: false
-  // 		},
-  // 		animation: {
-  // 			onComplete: () => {
-  // 				delayed = true;
-  // 			},
-  // 			delay: (context: any) => {
-  // 				let delay = 0;
-  // 				if (
-  // 					context.type === "data" &&
-  // 					context.mode === "default" &&
-  // 					!delayed
-  // 				) {
-  // 					delay = context.dataIndex * 3000 + context.datasetIndex * 100;
-  // 				}
-  // 				return delay;
-  // 			}
-  // 		},
-  // 		scales: {
-  // 			x: {
-  // 				stacked: true
-  // 			},
-  // 			y: {
-  // 				stacked: true
-  // 			}
-  // 		}
-  // 	}
-  // };
-
+  
   return (
     <LineChart
       options={datavizConfig[0].options}
