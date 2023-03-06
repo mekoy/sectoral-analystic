@@ -28,8 +28,8 @@ export interface IpPropsDataset {
 		label: string;
 		data: number[];
 		borderColor?: string;
-		backgroundColor?: string;
-		fill?: boolean;
+		backgroundColor?: any; // TODO
+		fill?: boolean | string | number;
 		opacity?: number;
 		hidden?: boolean
 	}[];
