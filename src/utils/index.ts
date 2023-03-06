@@ -119,7 +119,7 @@ export const datavizConfig = [
             },
             boxWidth: 0,
             boxHeight: 0,
-            padding: 15,
+            padding: 15
           },
           position: "right",
         },
