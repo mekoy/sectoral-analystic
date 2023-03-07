@@ -8,16 +8,18 @@ interface IDataVizGlobal {
 	dataApi: IdataResponse[];
 }
 
-const DataVizModuleDefault: React.FC<IDataVizGlobal> = ({}) => {
+const DataVizModuleDefault: React.FC<IDataVizGlobal> = ({dataApi}) => {
+	const dataConsoDefault = dataApi.map((item) => {
+		return item.conso_realisee;
+	});
 	const data = {
 		labels,
-		label: "",
 		datasets: [
 			{
 				label: "",
-				data: [],
-				borderColor: "rgb(0, 0, 0,0.2)",
-				backgroundColor: "rgb(0, 0, 0,0.2)",
+				data: dataConsoDefault ? [] : dataConsoDefault,
+				borderColor: "",
+				backgroundColor: "",
 				pointStyle: false
 			}
 		]
