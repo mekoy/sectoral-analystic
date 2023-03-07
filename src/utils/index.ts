@@ -74,9 +74,9 @@ export const datavizConfig = [
                   return (legendItem.fontColor = "rgb(0,0,0)");
 
                 case "Consommation corrigée 2022":
-                  return (legendItem.fontColor = "rgb(173, 52, 4)");
+                  return (legendItem.fontColor = "rgba(248, 81, 9, 1)");
 
-                case "Consommation réalisée cet hiver":
+                case "Consommation réelle 2022":
                   return (legendItem.fontColor = "rgba(255, 0, 0, 1)");
 
                 case "Consommation remise à condition normale de température":
@@ -104,6 +104,8 @@ export const datavizConfig = [
 					}
 				},
 				y: {
+					min: 40000,
+					max: 75000,
 					grid: {
 						drawBorder: false
 					},
