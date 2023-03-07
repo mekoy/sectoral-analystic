@@ -1,3 +1,5 @@
+import {ChartArea, ChartData} from "chart.js";
+
 export type ConfigOptions = {
 	chart: any;
 	dataIndex: number;
@@ -24,9 +26,12 @@ export type ConfigOptionsLegend = {
 	text: string;
 	textAlign: string | undefined;
 	fontColor: string;
+	borderRadius: number;
+	lineWidth: number;
 };
 export type ConfigOptionsAxesX = {
 	axis: string;
+	data: ChartArea;
 	bottom: number;
 	ticks: {
 		value: number[];
