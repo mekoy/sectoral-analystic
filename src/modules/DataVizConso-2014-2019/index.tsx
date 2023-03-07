@@ -24,7 +24,7 @@ const DataVizModule20142019: React.FC<IDataVizGlobal> = ({dataApi}) => {
 		labels,
 		datasets: [
 			{
-				label: "Moyenne 2018-2020",
+				label: "Moyenne 2014-2019",
 				data: dataConsoYearP,
 				borderColor: "",
 				backgroundColor: (context: ScriptableContext<"line">) => {
@@ -41,7 +41,7 @@ const DataVizModule20142019: React.FC<IDataVizGlobal> = ({dataApi}) => {
 			},
 
 			{
-				label: "Consommation corrigée",
+				label: "Consommation corrigée 2022",
 				data: dataConsoNormaleTemp,
 				borderColor: "rgba(248, 81, 9, 0.9)",
 				backgroundColor: "",
@@ -51,7 +51,7 @@ const DataVizModule20142019: React.FC<IDataVizGlobal> = ({dataApi}) => {
 				tension: 0.7
 			},
 			{
-				label: "Conso réelle",
+				label: "Consommation réelle 2022",
 				data: dataConsoReeel,
 				borderColor: "rgba(255, 0, 0, 0.1)",
 				backgroundColor: "",
