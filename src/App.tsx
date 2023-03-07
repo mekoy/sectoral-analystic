@@ -7,8 +7,7 @@ import {BsChevronRight, BsChevronLeft} from "react-icons/bs";
 
 import {ICurvesConsoContextType, useCurvesConsoContext} from "pages/context";
 import DataVizModule20142019 from "modules/DataVizConso-2014-2019";
-import DataVizConsumption2022 from "modules/DataVizConso-2022";
-import DataVizModuleDefault from "modules/DataVizConso-default";
+import DataVizModuleGlobal from "modules/DataVizConsoGlobal";
 
 const App: React.FC<{}> = () => {
 	const {dataFetch}: ICurvesConsoContextType = useCurvesConsoContext();
@@ -27,9 +26,8 @@ const App: React.FC<{}> = () => {
 	};
 
 	const components = [
-		// <DataVizModuleDefault dataApi={[]} />,
-		// <DataVizConsumption2022 dataApi={dataFetch} />,
-		<DataVizModule20142019 dataApi={dataFetch} />
+		<DataVizModule20142019 dataApi={dataFetch} />,
+		<DataVizModuleGlobal dataApi={dataFetch} />
 	];
 
 	return (
