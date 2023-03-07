@@ -69,18 +69,22 @@ export const datavizConfig = [
 					display: true,
 					labels: {
 						filter: (legendItem: ConfigOptionsLegend) => {
-							if (legendItem.text === "Consommation années 2014 - 2019") {
-								return (legendItem.fontColor = "rgb(0,0,0)");
-							}
-							if (legendItem.text === "") {
-								return (legendItem.fontColor = "");
-							}
-							if (legendItem.text === "Consommation corrigée 2022") {
-								return (legendItem.fontColor = "rgb(173, 52, 4)");
-							}
-							if (legendItem.text === "Consommation realisée 2022") {
-								return (legendItem.fontColor = "rgb(214, 19, 19)");
-							}
+							switch (legendItem.text) {
+                case "Consommation années 2014 - 2019":
+                  return (legendItem.fontColor = "rgb(0,0,0)");
+
+                case "Consommation corrigée 2022":
+                  return (legendItem.fontColor = "rgb(173, 52, 4)");
+
+                case "Consommation réalisée cet hiver":
+                  return (legendItem.fontColor = "rgba(255, 0, 0, 1)");
+
+                case "Consommation remise à condition normale de température":
+                  return (legendItem.fontColor = "rgba(248, 81, 9, 1)");
+
+                default:
+                  break;
+              }
 						},
 						boxWidth: 0,
 						boxHeight: 0,
