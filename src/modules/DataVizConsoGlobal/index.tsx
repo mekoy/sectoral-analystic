@@ -9,15 +9,13 @@ interface IDataVizGlobal {
 }
 
 const DataVizModuleGlobal: React.FC<IDataVizGlobal> = ({dataApi}) => {
-	const dataItems: IdataResponse[] = dataApi;
-	const dataConsoYearP = dataItems.map((item) => {
+	const dataConsoYearP = dataApi.map((item) => {
 		return item.conso_moyAnneePrec;
 	});
-	const dataConsoNormaleTemp = dataItems.map((item) => {
+	const dataConsoNormaleTemp = dataApi.map((item) => {
 		return item.conso_condNormaleTemp;
 	});
-
-	const dataConsoReel = dataItems.map((item) => {
+	const dataConsoReeel = dataApi.map((item) => {
 		return item.conso_realisee;
 	});
 
@@ -25,35 +23,38 @@ const DataVizModuleGlobal: React.FC<IDataVizGlobal> = ({dataApi}) => {
 		labels,
 		datasets: [
 			{
-				label: "Consommation années 2014 - 2019",
+				label: "Moyenne 2018-2020",
 				data: dataConsoYearP,
 				borderColor: "",
-				backgroundColor: "",
-				fill: false,
+				backgroundColor: "rgba(0, 194, 255,0.9)",
+				fill: "+1",
 				pointStyle: false,
-				tension: 0.7
+				tension: 0.5,
+				borderWidth: 2
 			},
+
 			{
-				label: "Consommation realisée 2022",
-				data: dataConsoReel,
-				borderColor: "rgb(214, 19, 19)",
-				backgroundColor: "",
-				fill: false,
-				pointStyle: false,
-				tension: 0.7
-			},
-			{
-				label: "Consommation corrigée 2022",
+				label: "Consommation corrigée",
 				data: dataConsoNormaleTemp,
-				borderColor: "rgb(204, 88, 10)",
+				borderColor: "rgba(248, 81, 9, 0.9)",
+				backgroundColor: "",
+				fill: "-1",
+				borderWidth: 3,
+				pointStyle: false,
+				tension: 0.7
+			},
+			{
+				label: "Conso réelle",
+				data: dataConsoReeel,
+				borderColor: "rgba(255, 0, 0, 01)",
 				backgroundColor: "",
 				fill: false,
 				pointStyle: false,
-				tension: 0.7
+				tension: 0.5,
+				borderWidth: 2
 			}
 		]
 	};
-
 	return (
 		<LineChart
 			options={datavizConfig[0].options}
