@@ -7,8 +7,8 @@ import {
 	LineElement,
 	Title,
 	Tooltip,
-	Filler,
-	Legend
+	Legend,
+	Filler
 } from "chart.js";
 import {Line} from "react-chartjs-2";
 
@@ -27,10 +27,11 @@ export interface IpPropsDataset {
 	datasets: {
 		label: string;
 		data: number[];
-		borderColor: string;
-		backgroundColor: string;
-		fill?: boolean;
+		borderColor?: string;
+		backgroundColor?: any; // TODO
+		fill?: boolean | string | number;
 		opacity?: number;
+		hidden?: boolean
 	}[];
 }
 
