@@ -9,6 +9,7 @@ import {ICurvesConsoContextType, useCurvesConsoContext} from "pages/context";
 import DataVizModule20142019 from "modules/DataVizConso-2014-2019";
 import ConsoThisWinter from "modules/ConsoThisWinter";
 import ConsoDiffThisWinter from "modules/ConsoDiffThisWinter";
+import DataVizModuleGlobal from "modules/DataVizConsoGlobal";
 
 const App: React.FC<{}> = () => {
 	const {dataFetch}: ICurvesConsoContextType = useCurvesConsoContext();
@@ -27,10 +28,10 @@ const App: React.FC<{}> = () => {
 	};
 
 	const components = [
-		// <DataVizModuleDefault dataApi={[]} />,
 		<ConsoThisWinter dataApi={dataFetch} />,
 		<ConsoDiffThisWinter dataApi={dataFetch} />,
-		<DataVizModule20142019 dataApi={dataFetch} />
+		<DataVizModule20142019 dataApi={dataFetch} />,
+		<DataVizModuleGlobal dataApi={dataFetch} />
 	];
 
 	return (

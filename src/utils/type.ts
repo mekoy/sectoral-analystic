@@ -1,5 +1,5 @@
 export type ConfigOptions = {
-	chart: {};
+	chart: any;
 	dataIndex: number;
 	formattedValue: string;
 	label: string;

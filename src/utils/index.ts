@@ -1,6 +1,7 @@
 import { Chart } from "chart.js";
 import { ConfigOptions, ConfigOptionsAxesX, ConfigOptionsLegend } from "./type";
 import dataItems from "../data/db_update.json";
+import {animation} from "./animation";
 
 const DISPLAY = true;
 const BORDER = true;
@@ -39,7 +40,6 @@ const plugin = {
   },
 };
 //add label axes X label weeks
-
 // chartJs config
 export const datavizConfig = [
   {

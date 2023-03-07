@@ -8,13 +8,17 @@ interface IDataVizGlobal {
 	dataApi: IdataResponse[];
 }
 
-const DataVizModule20142019: React.FC<IDataVizGlobal> = ({dataApi}) => {
+const DataVizModuleGlobal: React.FC<IDataVizGlobal> = ({dataApi}) => {
 	const dataItems: IdataResponse[] = dataApi;
 	const dataConsoYearP = dataItems.map((item) => {
 		return item.conso_moyAnneePrec;
 	});
 	const dataConsoNormaleTemp = dataItems.map((item) => {
 		return item.conso_condNormaleTemp;
+	});
+
+	const dataConsoReel = dataItems.map((item) => {
+		return item.conso_realisee;
 	});
 
 	const data = {
@@ -27,7 +31,16 @@ const DataVizModule20142019: React.FC<IDataVizGlobal> = ({dataApi}) => {
 				backgroundColor: "",
 				fill: false,
 				pointStyle: false,
-				tension: 0.5
+				tension: 0.7
+			},
+			{
+				label: "Consommation realisée 2022",
+				data: dataConsoReel,
+				borderColor: "rgb(214, 19, 19)",
+				backgroundColor: "",
+				fill: false,
+				pointStyle: false,
+				tension: 0.7
 			},
 			{
 				label: "Consommation corrigée 2022",
@@ -36,7 +49,7 @@ const DataVizModule20142019: React.FC<IDataVizGlobal> = ({dataApi}) => {
 				backgroundColor: "",
 				fill: false,
 				pointStyle: false,
-				tension: 0.5
+				tension: 0.7
 			}
 		]
 	};
@@ -51,4 +64,4 @@ const DataVizModule20142019: React.FC<IDataVizGlobal> = ({dataApi}) => {
 	);
 };
 
-export default DataVizModule20142019;
+export default DataVizModuleGlobal;
