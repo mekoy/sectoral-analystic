@@ -31,7 +31,7 @@ export interface IpPropsDataset {
 		backgroundColor?: any; // TODO
 		fill?: boolean | string | number | object;
 		opacity?: number;
-		hidden?: boolean
+		hidden?: boolean;
 	}[];
 }
 
