@@ -3,6 +3,7 @@ import React from "react";
 
 import {datavizConfig, labels} from "utils";
 import LineChart from "components/LineChart/LineChart";
+import {ScriptableContext} from "chart.js";
 
 interface IDataVizGlobal {
 	dataApi: IdataResponse[];
@@ -26,7 +27,13 @@ const DataVizModuleGlobal: React.FC<IDataVizGlobal> = ({dataApi}) => {
 				label: "Moyenne 2018-2020",
 				data: dataConsoYearP,
 				borderColor: "",
-				backgroundColor: "rgba(0, 194, 255,0.9)",
+				backgroundColor: (context: ScriptableContext<"line">) => {
+					const ctx = context.chart.ctx;
+					const gradient = ctx.createLinearGradient(0, 194, 255, 0.9);
+					gradient.addColorStop(0.3, "rgba(0, 194, 255)");
+					gradient.addColorStop(0.8, "rgb(12, 104, 212)");
+					return gradient;
+				},
 				fill: "+1",
 				pointStyle: false,
 				tension: 0.5,
