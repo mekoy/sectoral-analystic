@@ -7,8 +7,8 @@ import {
 	LineElement,
 	Title,
 	Tooltip,
-	Filler,
-	Legend
+	Legend,
+	Filler
 } from "chart.js";
 import {Line} from "react-chartjs-2";
 
