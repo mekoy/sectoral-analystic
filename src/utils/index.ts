@@ -77,15 +77,22 @@ export const datavizConfig = [
 						filter: (legendItem: ConfigOptionsLegend) => {
 							console.log(legendItem, "data");
 							switch (legendItem.text) {
-								case "Consommation années 2014 - 2019":
-									return (legendItem.fontColor = "rgb(0,0,0)");
+								case "Moyenne 2014-2019":
+									return {
+										fontColor: (legendItem.fontColor = "rgb(0,0,0)"),
+										lineWidth: (legendItem.lineWidth = 0)
+									};
 
 								case "Consommation corrigée 2022":
-									return (legendItem.fontColor = "rgba(248, 81, 9, 1)");
-
+									return {
+										fontColor: (legendItem.fontColor = "rgba(248, 81, 9, 1)"),
+										lineWidth: (legendItem.lineWidth = 0)
+									};
 								case "Consommation réelle 2022":
-									return (legendItem.fontColor = "rgba(255, 0, 0, 1)");
-
+									return {
+										fontColor: (legendItem.fontColor = "rgba(255, 0, 0, 1)"),
+										lineWidth: (legendItem.lineWidth = 0)
+									};
 								case "Consommation remise à condition normale de température":
 									return (legendItem.fontColor = "rgba(248, 81, 9, 1)");
 
@@ -93,8 +100,8 @@ export const datavizConfig = [
 									break;
 							}
 						},
-						boxWidth: 0,
-						boxHeight: 0,
+						boxWidth: 15,
+						boxHeight: 15,
 						padding: 15
 					},
 					position: "right",
