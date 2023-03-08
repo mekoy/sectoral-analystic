@@ -1,5 +1,5 @@
 const totalDuration = 50000;
-const delayBetweenPoints = totalDuration / 800;
+const delayBetweenPoints = totalDuration / 500;
 
 const previousY = (ctx: {
 	index: number;
