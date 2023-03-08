@@ -2,18 +2,14 @@ import {
 	Chart,
 	ChartArea,
 	ChartData,
+	CoreScaleOptions,
 	LegendElement,
-	LegendOptions
+	LegendOptions,
+	LinearScaleOptions
 } from "chart.js";
 import {ConfigOptions, ConfigOptionsAxesX, ConfigOptionsLegend} from "./type";
 import dataItems from "../data/db_update.json";
 import {animation} from "./animation";
-
-const DISPLAY = true;
-const BORDER = true;
-const CHART_AREA = false;
-const TICKS = true;
-console.log(dataItems, "dataItems");
 
 const monthLabelX = dataItems.data.filter((month) => {
 	if (month.Mois) {
@@ -33,6 +29,7 @@ export const yearsFull = (back: number): {label: string; year: number}[] => {
 		};
 	});
 };
+
 const plugin = {
 	id: "customCanvasBackgroundColor",
 	beforeDraw: (chart: Chart, args: any, options: {color: "#000"}) => {
@@ -80,22 +77,34 @@ export const datavizConfig = [
 								case "Moyenne 2014-2019":
 									return {
 										fontColor: (legendItem.fontColor = "rgb(0,0,0)"),
-										lineWidth: (legendItem.lineWidth = 0)
+										lineWidth: (legendItem.lineWidth = 0),
+										borderRadius: (legendItem.borderRadius = 4)
 									};
-
 								case "Consommation corrigée 2022":
 									return {
 										fontColor: (legendItem.fontColor = "rgba(248, 81, 9, 1)"),
-										lineWidth: (legendItem.lineWidth = 0)
+										lineWidth: (legendItem.lineWidth = 0),
+										borderRadius: (legendItem.borderRadius = 4)
 									};
 								case "Consommation réelle 2022":
 									return {
 										fontColor: (legendItem.fontColor = "rgba(255, 0, 0, 1)"),
-										lineWidth: (legendItem.lineWidth = 0)
+										lineWidth: (legendItem.lineWidth = 0),
+										borderRadius: (legendItem.borderRadius = 4)
 									};
-								case "Consommation remise à condition normale de température":
-									return (legendItem.fontColor = "rgba(248, 81, 9, 1)");
-
+								case "Entrainant une baisse de la consommation":
+									return {
+										fontColor: (legendItem.fontColor =
+											"rgba(32, 192, 11, 0.9)"),
+										lineWidth: (legendItem.lineWidth = 10),
+										borderRadius: (legendItem.borderRadius = 4)
+									};
+								case "Entrainant une hausse de la consommation":
+									return {
+										fontColor: (legendItem.fontColor = "rgba(255, 0, 0, 1)"),
+										lineWidth: (legendItem.lineWidth = 10),
+										borderRadius: (legendItem.borderRadius = 4)
+									};
 								default:
 									break;
 							}
@@ -111,23 +120,28 @@ export const datavizConfig = [
 				}
 			},
 			scale: {
+				gridLines: {
+					color: "rgb(105, 12, 12)",
+					lineWidth: 1
+				},
 				x: {
 					labels: (context: {scale: ConfigOptionsAxesX}) => {
 						if (context.scale.ticks) {
 							return monthLabelX.map((week) => {
-								return week.semaine;
+								if (week.Mois === "1") {
+									return " ";
+								}
+								return week.Mois;
 							});
 						}
 					}
 				},
 				y: {
-					min: 40000,
-					max: 75000,
-					grid: {
-						drawBorder: false
-					},
-					ticks: {
-						beginAtZero: false
+					beforeFit: (context: LinearScaleOptions) => {
+						// console.log(context, "context++");
+						if (context.axis === "y") {
+							return {};
+						}
 					}
 				}
 			}

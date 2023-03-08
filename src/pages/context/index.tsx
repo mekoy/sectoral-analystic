@@ -14,6 +14,8 @@ export interface IdataResponse {
 	Annee: number;
 	Mois: number;
 	semaine: string;
+	EffetClimat: number;
+	EffetSobriete: number;
 }
 export interface IdataViz2022 {
 	Annee: number;
@@ -37,7 +39,6 @@ export const CurvesConsoContext = createContext<ICurvesConsoContextType>(
 export const ContextProvider: React.FC<Props> = ({children}) => {
 	const [data, setData] = useState<IdataResponse[]>([]);
 	const yearsList = yearsFull(7);
-
 	const fetchData = () => {
 		fetch("http://localhost:8080/data", {
 			mode: "cors",

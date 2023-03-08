@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import Layout from "components/Layout";
 import Header from "components/Header";
 import {Button, ButtonGroup, ButtonToolbar, Col} from "reactstrap";
@@ -10,7 +11,7 @@ import DataVizModule20142019 from "modules/DataVizConso-2014-2019";
 import DataVizModuleGlobal from "modules/DataVizConsoGlobal";
 import ConsoDiffThisWinter from "modules/ConsoDiffThisWinter";
 import ConsoThisWinter from "modules/ConsoThisWinter";
-import DataVizModuleDefault from "modules/DataVizConso-default";
+import LayoutClimatConsoDiff from "pages/CurvesConsoNorm2022";
 
 const App: React.FC<{}> = () => {
 	const {dataFetch}: ICurvesConsoContextType = useCurvesConsoContext();
@@ -29,38 +30,40 @@ const App: React.FC<{}> = () => {
 	};
 
 	const components = [
-		// <DataVizModuleDefault dataApi={[]} />,
 		<ConsoThisWinter dataApi={dataFetch} />,
 		<ConsoDiffThisWinter dataApi={dataFetch} />,
+		<LayoutClimatConsoDiff dataApi={dataFetch} />,
 		<DataVizModule20142019 dataApi={dataFetch} />,
 		<DataVizModuleGlobal dataApi={dataFetch} />
 	];
 
 	return (
 		<Layout>
-			<Header>
-				<Col className="border w-100 py-4 text-xl-center">
-					<h1 className="fw-bold">
-						Analyse de la consommation de cet hiver 24-02-2023
-					</h1>
+			<Header clasName="head-wrapp py-4 text-white">
+				<Col className="w-100 py-4 text-xl-left">
+					<div className="header-title">Bilan de l’hiver - 2022/2023</div>
 				</Col>
 			</Header>
 			<>
-				<ButtonToolbar className="justify-content-end">
-					<ButtonGroup className="me-2">
-						<Button color="link" outline size="lg" onClick={prevComponent}>
-							<BsChevronLeft />
-						</Button>
-						<Button color="link" outline size="lg" onClick={nextComponent}>
-							<BsChevronRight />
-						</Button>
-					</ButtonGroup>
-				</ButtonToolbar>
-				{dataFetch ? (
-					components[componentIndex]
-				) : (
-					<div className="py-5 text-center">loadin.....</div>
-				)}
+				<div className="wrapp-content-gobal">
+					<div className="py-3 bg_button_wrapp w-100">
+						<ButtonToolbar className="justify-content-end bg_button_wrapp w-100">
+							<ButtonGroup className="me-2">
+								<Button color="link" outline size="lg" onClick={prevComponent}>
+									<BsChevronLeft />
+								</Button>
+								<Button color="link" outline size="lg" onClick={nextComponent}>
+									<BsChevronRight />
+								</Button>
+							</ButtonGroup>
+						</ButtonToolbar>
+					</div>
+					{dataFetch ? (
+						components[componentIndex]
+					) : (
+						<div className="py-5 text-center">loadin.....</div>
+					)}
+				</div>
 			</>
 		</Layout>
 	);

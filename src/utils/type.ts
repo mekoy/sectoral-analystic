@@ -1,4 +1,4 @@
-import {ChartArea, ChartData} from "chart.js";
+import {Chart, ChartArea} from "chart.js";
 
 export type ConfigOptions = {
 	chart: any;
@@ -30,11 +30,21 @@ export type ConfigOptionsLegend = {
 	lineWidth: number;
 };
 export type ConfigOptionsAxesX = {
-	axis: string;
+	chart: Chart;
 	data: ChartArea;
 	bottom: number;
 	ticks: {
-		value: number[];
-		label: number[];
+		value: number;
+		label: number | string;
 	}[];
+};
+export type IOptionDataBackground = {
+	dataIndex: number;
+	active: boolean;
+	element: {};
+	index: number;
+	pared: {x: number; y: number};
+	raw: number;
+	xStarted: boolean;
+	yStarted: boolean;
 };

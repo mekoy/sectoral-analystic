@@ -19,12 +19,10 @@ const ConsoThisWinter: React.FC<IDataVizGlobal> = ({dataApi}) => {
 	const conso_realized = "Consommation réelle 2022";
 	const conso_normal = "Consommation corrigée 2022";
 
-	const conso_realisee = dataApi.map(
-		(item: {conso_realisee: number}) => item.conso_realisee
-	);
+	const conso_realisee = dataApi.map((item) => item.conso_realisee);
 
 	const conso_condNormaleTemp = dataApi.map(
-		(item: {conso_condNormaleTemp: number}) => item.conso_condNormaleTemp
+		(item) => item.conso_condNormaleTemp
 	);
 
 	const data = {
@@ -57,7 +55,7 @@ const ConsoThisWinter: React.FC<IDataVizGlobal> = ({dataApi}) => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setShowSecondLine(true);
-		}, 5000);
+		}, 3000);
 
 		return () => clearTimeout(timer);
 	}, []);
