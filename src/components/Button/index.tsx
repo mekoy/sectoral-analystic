@@ -3,10 +3,10 @@ import {Button} from "reactstrap";
 
 interface IButton {
 	className?: string;
-	color: string;
+	color?: string;
 	label: string;
 	onClick: () => void;
-	size: string;
+	size?: string;
 }
 
 const ButtonDefault: React.FC<IButton> = ({
@@ -17,7 +17,7 @@ const ButtonDefault: React.FC<IButton> = ({
 	className
 }) => {
 	return (
-		<Button color={color} className={className} onClick={onClick} size={size}>
+		<Button color={color} className={className} onClick={onClick} size={size} outline>
 			{label}
 		</Button>
 	);
