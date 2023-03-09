@@ -65,13 +65,11 @@ canvas {
   align-items: baseline;
   color: rgba(0, 77, 102, 1);
 }
-
-.legend__content--item {
-  display: flex;
-  align-items: center;
-  padding-bottom: 6px;
-  justify-content: center;
+.label_legend {
+  width: 100%;
+  justify-content: space-between;
 }
+
 
 .btn.arrow {
   font-size: 2rem;
@@ -116,10 +114,20 @@ fieldset:disabled .btn,
   /* top: -50px; */
 }
 
+
 .customLine {
   width: 16px;
-  height: 4px;
+  height: 3px;
   margin-right: 5px;
+  justify-content: space-between;
+}
+.legend__content--item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 6px;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
 }
 
 .customEdge {
@@ -129,11 +137,14 @@ fieldset:disabled .btn,
 }
 
 .showChart {
-  color: rgba(6, 7, 9, 1);
-  font-size: 1.5rem;
-  position: relative;
-  bottom: 4px;
-  right: -3px;
+    color: rgba(6, 7, 9, 1);
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 4px;
+    width: 100%;
+    justify-content: space-between;
+    text-align: right;
+    padding-right: 15px;
 }
 
 .components__warpper{
