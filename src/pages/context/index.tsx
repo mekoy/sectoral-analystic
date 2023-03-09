@@ -38,29 +38,14 @@ export const CurvesConsoContext = createContext<ICurvesConsoContextType>(
 );
 
 export const ContextProvider: React.FC<Props> = ({children}) => {
-	const URL =
-		"https://rte-bucket-1.s3.eu-west-3.amazonaws.com/db-1677614941538.json";
+	// https://rte-bucket-1.s3.eu-west-3.amazonaws.com/db-1677614941538.json
+	const URL = "http://localhost:8080/data";
 	const [data, setData] = useState<IdataResponse[]>([]);
 	const yearsList = yearsFull(7);
-
-	const dataFetch = async () => {
-		try {
-			const response = await fetch(URL, {mode: "no-cors"});
-			const dataViz = await response.json();
-			console.log(dataViz, "dataViz");
-		} catch (error: any) {
-			throw new Error("Failed dataviz", error);
-		}
-	};
-
 	const fetchData = async () => {
 		fetch(URL, {
-			// credentials: "same-origin",
-			mode: "no-cors",
+			mode: "cors",
 			method: "GET",
-			// body: JSON.stringify(data),
-			redirect: "follow",
-			credentials: "same-origin",
 			headers: {
 				"Access-Control-Allow-Origin": "*",
 				"Content-Type": "application/json"
@@ -78,7 +63,6 @@ export const ContextProvider: React.FC<Props> = ({children}) => {
 
 	useEffect(() => {
 		fetchData();
-		dataFetch();
 	}, []);
 
 	const valueContext = {
