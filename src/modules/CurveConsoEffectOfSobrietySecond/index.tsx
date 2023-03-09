@@ -59,7 +59,7 @@ const CurveConsoEffectOfSobrietySecond: React.FC<IDataProps> = ({
         borderColor: "rgba(248, 81, 9, 1)",
         backgroundColor: "rgba(248, 81, 9, 1)",
         fill: false,
-        borderWidth: 3,
+        borderWidth: 4,
         pointStyle: false,
         tension: 0.7,
       },

@@ -53,8 +53,8 @@ export const datavizConfig = [
           },
           align: "start",
           padding: {
-            bottom: 20,
-            left: 5,
+            bottom: 15,
+            left: 10,
           },
         },
         events: ["click"],
@@ -94,7 +94,7 @@ export const datavizConfig = [
             boxHeight: 0,
             padding: 20,
             filter: (legendItem: ConfigOptionsLegend) => {
-              console.log(legendItem, "data");
+              //console.log(legendItem, "data");
               switch (legendItem.text) {
                 case "Moyenne 2014-2019":
                   return {
@@ -142,6 +142,13 @@ export const datavizConfig = [
           },
           position: "right",
           align: "start",
+        },
+        fillBetween: {
+          backgroundColorTop: 'rgba(75, 192, 192, 0.4)',
+          backgroundColorBottom: 'rgba(255, 99, 132, 0.4)',
+          boundaryLabels: {
+            show: true,
+          },
         },
       },
       scales: {

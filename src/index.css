@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -9,50 +9,20 @@ body {
   padding: 0;
 }
 
-.slick-slide img {
-  margin: auto;
+.wrapp__content {
+  margin: 20px 0;
 }
-.header-title{
-  font-family: 'Nunito Sans';
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 64px;
-  padding-left: 30px;
-}
-.head-wrapp {
-  background: #004D66;
-}
-canvas {
-  background-color:rgba(255, 255, 255);
-  margin-top: 30px;
-  padding: 30px;
-  border-radius: 6px;
-  background: #FFFFFF;
-}
-.bg_button_wrapp {
-  margin: 15px;
-  background-color:transparent;
-}
-.wrapp-content{
-  background-color:rgba(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius:4px;
-  margin-bottom: 32px;
-  box-shadow: 0px 4px 24px rgba(38, 41, 66, 0.06);
-}
-
 
 .box {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 8px;
   padding: 10px;
+  background-color: rgba(255, 255, 255);
 }
 
 .legend {
   position: absolute;
-  top: 16px;
+  top: 0;
   right: -35%;
   width: 32%;
   font-size: 13px;
@@ -66,10 +36,8 @@ canvas {
   color: rgba(0, 77, 102, 1);
 }
 .label_legend {
-  width: 100%;
-  justify-content: space-between;
+  width: auto;
 }
-
 
 .btn.arrow {
   font-size: 2rem;
@@ -104,8 +72,8 @@ fieldset:disabled .btn,
 }
 
 .toolbar {
-   position: absolute;
-   z-index: 999;
+  position: absolute;
+  z-index: 999;
   top: -65px;
   right: 0px; /**/
 }
@@ -113,7 +81,6 @@ fieldset:disabled .btn,
 .page-0 .toolbar {
   /* top: -50px; */
 }
-
 
 .customLine {
   width: 16px;
@@ -125,7 +92,7 @@ fieldset:disabled .btn,
   display: flex;
   align-items: center;
   padding-bottom: 6px;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: row;
   width: 100%;
 }
@@ -137,29 +104,27 @@ fieldset:disabled .btn,
 }
 
 .showChart {
-    color: rgba(6, 7, 9, 1);
-    font-size: 1.5rem;
-    position: relative;
-    bottom: 4px;
-    width: 100%;
-    justify-content: space-between;
-    text-align: right;
-    padding-right: 15px;
+  color: rgba(6, 7, 9, 1);
+  font-size: 1.5rem;
+  position: relative;
+  bottom: 4px;
+  width: auto;
+  margin-left: 5px;
 }
 
-.components__warpper{
+.components__warpper {
   position: relative;
-  margin-top: -5px;
+  margin-top: 15px;
   z-index: 0;
 }
 
-.CurveDiffConsoEffetClimat .legend{
-  top: 190px;
+.CurveDiffConsoEffetClimat .legend {
+  top: 160px;
 }
 
-.CurveConsoEffectOfSobrietyDecrease .legend{
-  top: 280px;
-} 
+.page-1 .CurveConsoEffectOfSobriety:last-child .legend, .CurveConsoEffectOfSobrietyDecrease .legend{
+  top: 200px;
+}
 .CurveDiffConsoEffetClimat {
   width: 100%;
   height: auto;
@@ -167,4 +132,18 @@ fieldset:disabled .btn,
 .CurveConsoEffectOfSobrietyDecrease {
   width: 100%;
   height: auto;
+}
+
+.page-1 .CurveConsoEffectOfSobriety:last-child canvas{
+  display: none !important;
+}
+
+.page-1 .CurveConsoEffectOfSobriety:first-child .legend .legend__content--item:last-child,
+.page-1 .CurveConsoEffectOfSobrietySecond:first-child .legend .legend__content--item:last-child,
+.page-1 .CurveConsoEffectOfSobriety:last-child .legend .legend__content--item:first-child,
+.page-1 .CurveConsoEffectOfSobriety:last-child .legend .legend__content--item:nth-child(4),
+.page-1 .CurveConsoEffectOfSobriety:last-child .legend .legend__content--item:nth-child(2),
+.page-1 .CurveConsoEffectOfSobriety:last-child .legend .legend__content--item:nth-child(3),
+.page-1 .CurveConsoEffectOfSobrietyDecrease:first-child .legend .legend__content--item:last-child{
+  display: none !important;
 }
