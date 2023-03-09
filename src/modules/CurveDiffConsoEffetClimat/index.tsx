@@ -65,13 +65,11 @@ const CurveDiffConsoEffetClimat: React.FC<IDataVizGlobal> = ({
 	};
 
 	return (
-		<div className="wrapp-content">
+		<div className="">
 			<LineChart
 				customClass="CurveDiffConsoEffetClimat"
 				line={line}
 				title={title}
-				width={"600px"}
-				height={"345px"}
 				options={datavizConfig[0].options}
 				data={data}
 				plugins={datavizConfig[0].options}
