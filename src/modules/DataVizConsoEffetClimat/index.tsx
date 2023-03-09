@@ -2,7 +2,7 @@ import {IdataResponse} from "pages/context";
 import React from "react";
 
 import {datavizConfig, labels} from "utils";
-import LineChart from "components/LineChart/LineChart";
+import LineChart from "components/LineChart";
 
 import {IOptionDataBackground} from "utils/type";
 import dataItems from "../../data/db_update.json";
