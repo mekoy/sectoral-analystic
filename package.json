@@ -72,6 +72,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "https://rte-bucket-1.s3.eu-west-3.amazonaws.com",
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
     "eslint-config-react": "^1.1.7",
