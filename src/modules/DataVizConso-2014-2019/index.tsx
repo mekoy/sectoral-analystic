@@ -16,29 +16,10 @@ const DataVizModule20142019: React.FC<IDataVizGlobal> = ({dataApi}) => {
 	const dataConsoNormaleTemp = dataApi.map((item) => {
 		return item.conso_condNormaleTemp;
 	});
-	const dataConsoReeel = dataApi.map((item) => {
-		return item.conso_realisee;
-	});
 
 	const data = {
 		labels,
 		datasets: [
-			// {
-			// 	label: "Moyenne 2014-2019",
-			// 	data: dataConsoYearP,
-			// 	borderColor: "",
-			// 	backgroundColor: (context: ScriptableContext<"line">) => {
-			// 		const ctx = context.chart.ctx;
-			// 		const gradient = ctx.createLinearGradient(0, 194, 255, 0.9);
-			// 		gradient.addColorStop(0.3, "rgba(0, 194, 255)");
-			// 		gradient.addColorStop(0.8, "rgb(12, 104, 212)");
-			// 		return gradient;
-			// 	},
-			// 	fill: "+1",
-			// 	pointStyle: false,
-			// 	tension: 0.5,
-			// 	borderWidth: 2
-			// },
 			{
 				label: "Moyenne 2014-2019",
 				data: dataConsoYearP,

@@ -5,6 +5,7 @@ import {
 	LinearScale,
 	PointElement,
 	LineElement,
+	BarElement,
 	Title,
 	Tooltip,
 	Legend,
@@ -26,7 +27,7 @@ export interface IpPropsDataset {
 	labels: string[];
 	datasets: {
 		label: string;
-		data: number[];
+		data: number[] | {};
 		borderColor?: string;
 		backgroundColor?: any; // TODO
 		fill?: boolean | string | number | object;
@@ -40,6 +41,7 @@ ChartJS.register(
 	LinearScale,
 	PointElement,
 	LineElement,
+	BarElement,
 	Title,
 	Tooltip,
 	Legend,

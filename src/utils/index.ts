@@ -1,15 +1,9 @@
-import {
-	Chart,
-	ChartArea,
-	ChartData,
-	CoreScaleOptions,
-	LegendElement,
-	LegendOptions,
-	LinearScaleOptions
-} from "chart.js";
+import {Chart, LinearScaleOptions} from "chart.js";
 import {ConfigOptions, ConfigOptionsAxesX, ConfigOptionsLegend} from "./type";
 import dataItems from "../data/db_update.json";
 import {animation} from "./animation";
+import {actions} from "./actions";
+import {externalTooltipHandler} from "./generateTooltipExternal";
 
 const monthLabelX = dataItems.data.filter((month) => {
 	if (month.Mois) {
@@ -30,35 +24,41 @@ export const yearsFull = (back: number): {label: string; year: number}[] => {
 	});
 };
 
-const plugin = {
-	id: "customCanvasBackgroundColor",
-	beforeDraw: (chart: Chart, args: any, options: {color: "#000"}) => {
-		const {ctx} = chart;
-		console.log(ctx, "ctx");
-		ctx.save();
-		ctx.globalCompositeOperation = "destination-over";
-		ctx.fillStyle = options.color || "#b65555";
-		ctx.fillRect(0, 0, chart.width, chart.height);
-		ctx.restore();
-	}
-};
 //add label axes X label weeks
 // chartJs config
 export const datavizConfig = [
 	{
+		type: "scatter",
 		options: {
 			responsive: true,
 			onClick: (indexValue: any) => indexValue,
+			interaction: {
+				mode: "index",
+				intersect: false
+			},
 			animation,
+			actions,
 			plugins: {
-				customCanvasBackgroundColor: {
-					color: "lightGreen"
+				title: {
+					display: true,
+					text: "Puissance moyenne semaine en GW",
+					color: "#ccc",
+					font: {
+						size: 14,
+						weight: "normal",
+						style: "normal"
+					},
+					align: "start",
+					padding: {
+						bottom: 20
+					}
 				},
 				events: ["click"],
 				tooltip: {
+					enabled: true,
+					position: "nearest",
 					callbacks: {
 						label: (context: ConfigOptions) => {
-							// console.log(context, "legent");
 							if (context.dataIndex === 0) {
 								return (context.label = "" + context.formattedValue);
 							}
@@ -70,53 +70,59 @@ export const datavizConfig = [
 				},
 				legend: {
 					display: true,
+					title: {
+						display: true,
+						color: "rgb(0, 0, 0)",
+						text: "Text custom",
+						position: "start",
+						padding: {
+							top: 45,
+							left: 25,
+							right: 30
+						},
+						font: {
+							size: 14,
+							weight: "bold"
+						}
+					},
 					labels: {
+						boxWidth: 12,
+						boxHeight: 0,
+						padding: 20,
 						filter: (legendItem: ConfigOptionsLegend) => {
 							console.log(legendItem, "data");
 							switch (legendItem.text) {
 								case "Moyenne 2014-2019":
 									return {
-										fontColor: (legendItem.fontColor = "rgb(0,0,0)"),
-										lineWidth: (legendItem.lineWidth = 0),
-										borderRadius: (legendItem.borderRadius = 4)
+										borderRadius: (legendItem.borderRadius = 2)
 									};
 								case "Consommation corrigée 2022":
 									return {
-										fontColor: (legendItem.fontColor = "rgba(248, 81, 9, 1)"),
-										lineWidth: (legendItem.lineWidth = 0),
-										borderRadius: (legendItem.borderRadius = 4)
+										borderRadius: (legendItem.borderRadius = 2)
 									};
 								case "Consommation réelle 2022":
 									return {
-										fontColor: (legendItem.fontColor = "rgba(255, 0, 0, 1)"),
-										lineWidth: (legendItem.lineWidth = 0),
-										borderRadius: (legendItem.borderRadius = 4)
+										borderRadius: (legendItem.borderRadius = 2)
 									};
 								case "Entrainant une baisse de la consommation":
 									return {
-										fontColor: (legendItem.fontColor =
-											"rgba(32, 192, 11, 0.9)"),
-										lineWidth: (legendItem.lineWidth = 10),
-										borderRadius: (legendItem.borderRadius = 4)
+										borderRadius: (legendItem.borderRadius = 2)
 									};
 								case "Entrainant une hausse de la consommation":
 									return {
-										fontColor: (legendItem.fontColor = "rgba(255, 0, 0, 1)"),
-										lineWidth: (legendItem.lineWidth = 10),
-										borderRadius: (legendItem.borderRadius = 4)
+										borderRadius: (legendItem.borderRadius = 2)
+									};
+								case "Entrainant une baisse de la consommation":
+									return {
+										borderRadius: (legendItem.borderRadius = 2)
 									};
 								default:
 									break;
 							}
-						},
-						boxWidth: 15,
-						boxHeight: 15,
-						padding: 15
+						}
 					},
 					position: "right",
-					maxHeight: 30,
-					align: "start",
-					padding: 30
+					align: "start"
 				}
 			},
 			scale: {
@@ -145,7 +151,6 @@ export const datavizConfig = [
 					}
 				}
 			}
-		},
-		plugins: [plugin]
+		}
 	}
 ];

@@ -19,10 +19,44 @@ const DataVizModuleGlobal: React.FC<IDataVizGlobal> = ({dataApi}) => {
 	const dataConsoReeel = dataApi.map((item) => {
 		return item.conso_realisee;
 	});
+	const dataWeekNovember = dataApi.filter((item) => {
+		if (item.Mois === 11) {
+			return item;
+		}
+	});
+	const dataWeekNov = dataWeekNovember.map((weekNow) => {
+		return weekNow;
+	});
+
+	const dataNovTem = dataWeekNov;
+
+	console.log(dataNovTem, "dataNovTem");
 
 	const data = {
 		labels,
 		datasets: [
+			{
+				type: "bar",
+				label: "Moyenne 2014-2019",
+				data: dataConsoReeel,
+				barPercentage: 0,
+				barThickness: 50,
+				maxBarThickness: 8,
+				minBarLength: 0,
+				borderColor: "transparent",
+				// backgroundColor: ["red"],
+				backgroundColor: (context: ScriptableContext<"bar">) => {
+					const ctx = context.chart;
+					const data = context.dataset;
+					const indexData = context.datasetIndex;
+					console.log(ctx, "ctx");
+					console.log(data, "data");
+					return "green";
+				},
+				pointStyle: false,
+				tension: 0,
+				borderWidth: 1
+			},
 			{
 				label: "Moyenne 2014-2019",
 				data: dataConsoYearP,
