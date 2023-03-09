@@ -16,6 +16,8 @@ import LayoutSobrietyConso from "pages/LayoutSobrietyConso";
 
 const App: React.FC<{}> = () => {
 	const {dataFetch}: ICurvesConsoContextType = useCurvesConsoContext();
+	console.log(dataFetch, "dataFetch");
+
 	const [componentIndex, setComponentIndex] = useState(0);
 
 	const nextComponent = () => {

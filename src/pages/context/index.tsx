@@ -36,14 +36,33 @@ interface Props {
 export const CurvesConsoContext = createContext<ICurvesConsoContextType>(
 	{} as ICurvesConsoContextType
 );
+
 export const ContextProvider: React.FC<Props> = ({children}) => {
+	const URL =
+		"https://rte-bucket-1.s3.eu-west-3.amazonaws.com/db-1677614941538.json";
 	const [data, setData] = useState<IdataResponse[]>([]);
 	const yearsList = yearsFull(7);
-	const fetchData = () => {
-		fetch("http://localhost:8080/data", {
-			mode: "cors",
+
+	const dataFetch = async () => {
+		try {
+			const response = await fetch(URL, {mode: "no-cors"});
+			const dataViz = await response.json();
+			console.log(dataViz, "dataViz");
+		} catch (error: any) {
+			throw new Error("Failed dataviz", error);
+		}
+	};
+
+	const fetchData = async () => {
+		fetch(URL, {
+			// credentials: "same-origin",
+			mode: "no-cors",
 			method: "GET",
+			// body: JSON.stringify(data),
+			redirect: "follow",
+			credentials: "same-origin",
 			headers: {
+				"Access-Control-Allow-Origin": "*",
 				"Content-Type": "application/json"
 			}
 		})
@@ -51,13 +70,15 @@ export const ContextProvider: React.FC<Props> = ({children}) => {
 				return response.json();
 			})
 			.then((response: IdataResponse[]) => setData(response))
-			.catch((error) => {
+			.catch((error: any) => {
+				console.log(error);
 				throw new Error("Failed dataviz", error);
 			});
 	};
 
 	useEffect(() => {
 		fetchData();
+		dataFetch();
 	}, []);
 
 	const valueContext = {
