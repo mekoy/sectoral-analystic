@@ -28,6 +28,11 @@ export type ConfigOptionsLegend = {
 	fontColor: string;
 	borderRadius: number;
 	lineWidth: number;
+	index: number;
+	labels: {
+		boxWidth: number;
+		boxHeight: number;
+	};
 };
 export type ConfigOptionsAxesX = {
 	chart: Chart;
