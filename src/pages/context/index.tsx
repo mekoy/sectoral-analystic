@@ -47,7 +47,14 @@ export const ContextProvider: React.FC<Props> = ({children}) => {
 
 	const fetchData = async () => {
 		await axios
-			.get(URL)
+			.get(URL, {
+				headers: {
+					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT",
+					"Content-Type": "application/json",
+					Accept: "application/json"
+				}
+			})
 			.then((response: AxiosResponse<any>) => {
 				return response.data;
 			})
