@@ -4,6 +4,8 @@ import React, {useEffect, useState} from "react";
 import {datavizConfig, labels} from "utils";
 import LineChart, {IpPropsDataset} from "components/LineChart";
 import {ScriptableContext} from "chart.js";
+import WeekNovember from "./weekNovember";
+import DaysDecember from "./daysDecember";
 
 interface IDataProps {
 	dataApi: IdataResponse[];
@@ -27,27 +29,6 @@ const CurveSynthesis: React.FC<IDataProps> = ({title, line, dataApi}) => {
 	const data = {
 		labels,
 		datasets: [
-			{
-				type: "bar",
-				label: "Moyenne 2014-2019",
-				data: dataConsoReeel,
-				barPercentage: 0,
-				barThickness: 50,
-				maxBarThickness: 8,
-				minBarLength: 0,
-				borderColor: "transparent",
-				backgroundColor: (context: ScriptableContext<"bar">) => {
-					const ctx = context.chart;
-					const data = context.dataset;
-					const indexData = context.datasetIndex;
-					console.log(ctx, "ctx");
-					console.log(data, "data");
-					return "green";
-				},
-				pointStyle: false,
-				tension: 0,
-				borderWidth: 1
-			},
 			{
 				label: "Consommation effective 2022",
 				data: dataConsoReeel,
@@ -102,14 +83,18 @@ const CurveSynthesis: React.FC<IDataProps> = ({title, line, dataApi}) => {
 	}, [showSecondLine]);
 
 	return (
-		<LineChart
-			customClass="CurveSynthesis"
-			title={title}
-			line={line}
-			options={datavizConfig[0].options}
-			data={data}
-			plugins={datavizConfig[0].options}
-		/>
+		<>
+			<LineChart
+				customClass="CurveSynthesis"
+				title={title}
+				line={line}
+				options={datavizConfig[0].options}
+				data={data}
+				plugins={datavizConfig[0].options}
+			/>
+			<DaysDecember />
+			<WeekNovember />
+		</>
 	);
 };
 

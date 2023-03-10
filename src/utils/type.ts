@@ -37,7 +37,9 @@ export type ConfigOptionsLegend = {
 export type ConfigOptionsAxesX = {
 	chart: Chart;
 	data: ChartArea;
+	axis: string;
 	bottom: number;
+	labelRotation: number;
 	ticks: {
 		value: number;
 		label: number | string;
