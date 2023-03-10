@@ -170,7 +170,6 @@ export const datavizConfig = [
 				y: {
 					stackWeight: 1,
 					beforeFit: (context: LinearScaleOptions) => {
-						// console.log(context, "context++");
 						if (context.axis === "y") {
 							return {};
 						}

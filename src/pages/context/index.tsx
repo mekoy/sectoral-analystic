@@ -1,11 +1,9 @@
+import axios, {AxiosError, AxiosResponse} from "axios";
 import React, {createContext, useContext, useEffect, useState} from "react";
-import {yearsFull} from "utils";
 
 export type ICurvesConsoContextType = {
-	fetchData: () => void;
 	dataFetch: IdataResponse[];
-	dataFetch_2022: IdataResponse[];
-	yearsList: {label: string; year: number}[];
+	isLoading: boolean;
 };
 export interface IdataResponse {
 	conso_realisee: number;
@@ -16,6 +14,9 @@ export interface IdataResponse {
 	semaine: string;
 	EffetClimat: number;
 	EffetSobriete: number;
+}
+export interface IIsLoading {
+	isLoading: boolean;
 }
 export interface IdataViz2022 {
 	Annee: number;
@@ -36,40 +37,45 @@ interface Props {
 export const CurvesConsoContext = createContext<ICurvesConsoContextType>(
 	{} as ICurvesConsoContextType
 );
+export type ServerError = {errorMessage: string};
 
 export const ContextProvider: React.FC<Props> = ({children}) => {
-	// https://rte-bucket-1.s3.eu-west-3.amazonaws.com/db-1677614941538.json
-	const URL = "http://localhost:8080/data";
-	const [data, setData] = useState<IdataResponse[]>([]);
-	const yearsList = yearsFull(7);
+	const URL =
+		"https://rte-bucket-1.s3.eu-west-3.amazonaws.com/db-1677614941538.json";
+	const [dataFetching, SetDataFetching] = useState<IdataResponse[]>([]);
+	const [isLoading, setIsLoading] = useState<boolean>(true);
+
 	const fetchData = async () => {
-		fetch(URL, {
-			mode: "cors",
-			method: "GET",
-			headers: {
-				"Access-Control-Allow-Origin": "*",
-				"Content-Type": "application/json"
-			}
-		})
-			.then((response) => {
-				return response.json();
+		await axios
+			.get(URL)
+			.then((response: AxiosResponse<any>) => {
+				return response.data;
 			})
-			.then((response: IdataResponse[]) => setData(response))
-			.catch((error: any) => {
-				console.log(error);
-				throw new Error("Failed dataviz", error);
+			.then((response: AxiosResponse<IdataResponse[]>) => {
+				SetDataFetching(response.data);
+			})
+			.catch((err) => {
+				const serverError = err as AxiosError<ServerError>;
+				if (serverError && serverError.response) {
+					return {
+						errorMessage: `${serverError.response}`
+					};
+				}
+			})
+			.finally(() => {
+				setIsLoading(true);
 			});
 	};
 
 	useEffect(() => {
-		fetchData();
-	}, []);
+		if (isLoading) {
+			fetchData();
+		}
+	}, [isLoading]);
 
 	const valueContext = {
-		fetchData,
-		dataFetch: data,
-		dataFetch_2022: data,
-		yearsList
+		dataFetch: dataFetching,
+		isLoading: isLoading
 	};
 
 	return (
