@@ -8,10 +8,10 @@ const styleCustom: {
 } = {
 	weekBottomLabel: {
 		position: "absolute",
-		left: "60.13%",
+		left: "46.13%",
 		right: "34.07%",
-		top: "76.85%",
-		bottom: "17.48%",
+		top: "81.85%",
+		bottom: "12.48%",
 		width: "158px",
 		fontFamily: "Nunito Sans",
 		fontStyle: "normal",
@@ -28,10 +28,10 @@ const styleCustom: {
 	},
 	week: {
 		position: "absolute",
-		left: "65.1%",
+		left: "52.1%",
 		right: "36.92%",
-		top: "11.15%",
-		bottom: "22.45%",
+		top: "29.15%",
+		bottom: "12.45%",
 		border: "1px dashed rgb(97, 97, 97)",
 		borderRadius: "5px",
 		width: "50px"

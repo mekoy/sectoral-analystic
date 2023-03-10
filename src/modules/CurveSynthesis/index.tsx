@@ -62,7 +62,7 @@ const CurveSynthesis: React.FC<IDataProps> = ({title, line, dataApi}) => {
 					gradient.addColorStop(0, "rgba(12, 104, 212, 0)");
 					return gradient;
 				},
-				fill: "1",
+				fill: false,
 				pointStyle: false,
 				tension: 0.5,
 				borderWidth: 2

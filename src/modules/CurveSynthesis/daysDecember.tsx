@@ -8,10 +8,10 @@ const styleCustom: {
 } = {
 	dayBottomLabel: {
 		position: "absolute",
-		left: "78.13%",
+		left: "63.13%",
 		right: "34.07%",
-		top: "76.85%",
-		bottom: "17.48%",
+		top: "81.85%",
+		bottom: "12.48%",
 		width: "120px",
 		fontFamily: "Nunito Sans",
 		fontStyle: "normal",
@@ -28,10 +28,10 @@ const styleCustom: {
 	},
 	daysNov: {
 		position: "absolute",
-		left: "83.9%",
+		left: "68%",
 		right: "36.92%",
-		top: "8.15%",
-		bottom: "22.45%",
+		top: "7.15%",
+		bottom: "17.45%",
 		border: "1px dashed rgb(97, 97, 97)",
 		borderRadius: "5px",
 		width: "10px"
