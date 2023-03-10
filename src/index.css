@@ -147,3 +147,16 @@ fieldset:disabled .btn,
 .page-1 .CurveConsoEffectOfSobrietyDecrease:first-child .legend .legend__content--item:last-child{
   display: none !important;
 }
+
+.modal-content {
+  width: 65%!important;
+}
+h5.modal-title {
+  font-size: 12px!important;
+}
+canvas#pieChart {
+  padding: 5px!important;
+  margin: 0 auto!important;
+}
+
+
