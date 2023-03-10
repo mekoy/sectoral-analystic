@@ -24,8 +24,8 @@ body {
 .legend {
   position: absolute;
   top: 0;
-  right: -35%;
-  width: 32%;
+  right: -38%;
+  width: 34%;
   font-size: 13px;
 }
 
@@ -139,6 +139,10 @@ fieldset:disabled .btn,
   top: 140px;
 }
 
+.page-2 .CurveDiffConsoEffetClimat .legend {
+  top: 260px;
+}
+
 .CurveDiffConsoEffetClimat {
   width: 100%;
   height: auto;
@@ -150,7 +154,8 @@ fieldset:disabled .btn,
 }
 
 .page-1 .CurveConsoEffectOfSobriety:last-child canvas,
-.page-2 .CurveConsoEffectOfSobriety canvas {
+.page-2 .CurveConsoEffectOfSobriety canvas,
+.page-2 .CurveDiffConsoEffetClimat canvas {
   display: none !important;
 }
 
@@ -163,13 +168,12 @@ fieldset:disabled .btn,
 .page-1 .CurveConsoEffectOfSobrietyDecrease:first-child .legend .legend__content--item:last-child,
 .page-2 .CurveConsoEffectOfSobriety .legend .legend__content--item:nth-child(2),
 .page-2 .CurveConsoEffectOfSobriety .legend .legend__content--item:nth-child(3),
-.page-2 .CurveConsoEffectOfSobriety .legend .legend__content--item:nth-child(4)
- {
+.page-2 .CurveConsoEffectOfSobriety .legend .legend__content--item:nth-child(4) {
   display: none !important;
 }
 
 .modal-header {
-  border:none !important;
+  border: none !important;
 }
 
 .modal-body {
