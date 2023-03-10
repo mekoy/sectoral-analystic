@@ -6,6 +6,7 @@ import {
 import { ButtonToolbar, ButtonGroup, Button } from "reactstrap";
 import { IdataResponse } from "pages/context";
 import CurveSynthesis from "modules/CurveSynthesis";
+import CurveConsoEffectOfSobriety from "modules/CurveConsoEffectOfSobriety";
 
 interface IDataViz {
   dataViz?: React.ReactNode;
@@ -28,7 +29,10 @@ const Synthesis: React.FC<IDataViz> = ({ dataViz, dataApi }) => {
   };
 
   const components = [
-    <CurveSynthesis dataApi={dataApi} title={"Consommation"} line={true} />,
+    <>
+      <CurveSynthesis dataApi={dataApi} title={"Consommation"} line={true} />,
+      <CurveConsoEffectOfSobriety dataApi={dataApi}  title={"Effet de la sobriété"}/>
+    </>,
   ];
 
   return (

@@ -142,13 +142,6 @@ export const datavizConfig = [
 					},
 					position: "right",
 					align: "start"
-				},
-				fillBetween: {
-					backgroundColorTop: "rgba(75, 192, 192, 0.4)",
-					backgroundColorBottom: "rgba(255, 99, 132, 0.4)",
-					boundaryLabels: {
-						show: true
-					}
 				}
 			},
 			scales: {

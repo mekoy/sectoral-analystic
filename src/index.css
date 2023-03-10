@@ -4,6 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .App {
   margin: 0;
   padding: 0;
@@ -35,6 +36,7 @@ body {
   align-items: baseline;
   color: rgba(0, 77, 102, 1);
 }
+
 .label_legend {
   width: auto;
 }
@@ -43,11 +45,11 @@ body {
   font-size: 2rem;
 }
 
-.btn-check:checked + .btn,
+.btn-check:checked+.btn,
 .btn.active,
 .btn.show,
 .btn:first-child:active,
-:not(.btn-check) + .btn:active,
+:not(.btn-check)+.btn:active,
 .btn.disabled,
 .btn:disabled,
 fieldset:disabled .btn,
@@ -59,11 +61,11 @@ fieldset:disabled .btn,
   border: 1px solid #429ccc !important;
 }
 
-.btn-check:checked + .btn.custom,
+.btn-check:checked+.btn.custom,
 .btn.custom.active,
 .btn.custom.show,
 .btn.custom:first-child:active,
-:not(.btn.custom-check) + .btn.custom:active,
+:not(.btn.custom-check)+.btn.custom:active,
 .btn.custom:hover,
 .btn.custom:focus,
 .btn.custom:active {
@@ -75,7 +77,8 @@ fieldset:disabled .btn,
   position: absolute;
   z-index: 999;
   top: -65px;
-  right: 0px; /**/
+  right: 0px;
+  /**/
 }
 
 .page-0 .toolbar {
@@ -88,6 +91,7 @@ fieldset:disabled .btn,
   margin-right: 5px;
   justify-content: space-between;
 }
+
 .legend__content--item {
   display: flex;
   align-items: center;
@@ -122,19 +126,31 @@ fieldset:disabled .btn,
   top: 160px;
 }
 
-.page-1 .CurveConsoEffectOfSobriety:last-child .legend, .CurveConsoEffectOfSobrietyDecrease .legend{
+.page-1 .CurveConsoEffectOfSobriety:last-child .legend,
+.CurveConsoEffectOfSobrietyDecrease .legend {
   top: 200px;
 }
+
+.page-2 .CurveSynthesis .legend {
+  top: -64px;
+}
+
+.page-2 .CurveConsoEffectOfSobriety .legend {
+  top: 140px;
+}
+
 .CurveDiffConsoEffetClimat {
   width: 100%;
   height: auto;
 }
+
 .CurveConsoEffectOfSobrietyDecrease {
   width: 100%;
   height: auto;
 }
 
-.page-1 .CurveConsoEffectOfSobriety:last-child canvas{
+.page-1 .CurveConsoEffectOfSobriety:last-child canvas,
+.page-2 .CurveConsoEffectOfSobriety canvas {
   display: none !important;
 }
 
@@ -144,19 +160,31 @@ fieldset:disabled .btn,
 .page-1 .CurveConsoEffectOfSobriety:last-child .legend .legend__content--item:nth-child(4),
 .page-1 .CurveConsoEffectOfSobriety:last-child .legend .legend__content--item:nth-child(2),
 .page-1 .CurveConsoEffectOfSobriety:last-child .legend .legend__content--item:nth-child(3),
-.page-1 .CurveConsoEffectOfSobrietyDecrease:first-child .legend .legend__content--item:last-child{
+.page-1 .CurveConsoEffectOfSobrietyDecrease:first-child .legend .legend__content--item:last-child,
+.page-2 .CurveConsoEffectOfSobriety .legend .legend__content--item:nth-child(2),
+.page-2 .CurveConsoEffectOfSobriety .legend .legend__content--item:nth-child(3),
+.page-2 .CurveConsoEffectOfSobriety .legend .legend__content--item:nth-child(4)
+ {
   display: none !important;
 }
 
+.modal-header {
+  border:none !important;
+}
+
+.modal-body {
+  padding: 0 !important;
+}
+
 .modal-content {
-  width: 65%!important;
+  width: 65% !important;
 }
+
 h5.modal-title {
-  font-size: 12px!important;
+  font-size: 12px !important;
 }
+
 canvas#pieChart {
-  padding: 5px!important;
-  margin: 0 auto!important;
+  padding: 5px !important;
+  margin: 0 auto !important;
 }
-
-

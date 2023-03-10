@@ -1,10 +1,12 @@
 import React from "react";
 import PieChart from "./piedaaviz";
 import {ConfigOptionsLegend} from "utils/type";
+import { Chart } from 'chart.js';
+import { ChartOptions } from 'chart.js';
 
 export const dataDaysDecm = {
 	labels: ["Residentiel", "Industrie", "Tertiaire"],
-	type: "pie",
+	type: "doughnut",
 	index: 0,
 	datasets: [
 		{
@@ -19,6 +21,7 @@ export const dataDaysDecm = {
 		}
 	],
 	options: {
+		cutout:60,
 		plugins: {
 			tooltip: {
 				enabled: true
@@ -27,33 +30,35 @@ export const dataDaysDecm = {
 				display: true,
 				position: "right",
 				legend: {
-					display: false,
+					display: true,
 					labels: {
 						boxWidth: 12,
 						boxHeight: 0,
-						padding: 20,
-						filter: (legendItem: ConfigOptionsLegend) => {
+						padding: 0,
+						usePointStyle:true,
+						filter: (legendItem: ChartOptions) => {
 							console.log(legendItem, "legendItem modal");
-							switch (legendItem.text) {
-								case "Residentiel":
-									return {
-										borderRadius: (legendItem.borderRadius = 2)
-									};
-								case "Industrie":
-									return {
-										borderRadius: (legendItem.borderRadius = 2)
-									};
-								case "Tertiaire":
-									return {
-										borderRadius: (legendItem.borderRadius = 2)
-									};
-								default:
-									break;
-							}
+							// switch (legendItem.text) {
+							// 	case "Residentiel":
+							// 		return {
+							// 			borderRadius: (legendItem.borderRadius = 5),
+							// 			lineWidth: (legendItem.lineWidth = 5),
+							// 		};
+							// 	case "Industrie":
+							// 		return {
+							// 			borderRadius: (legendItem.borderRadius = 5)
+							// 		};
+							// 	case "Tertiaire":
+							// 		return {
+							// 			borderRadius: (legendItem.borderRadius = 5)
+							// 		};
+							// 	default:
+							// 		break;
+							// }
 						}
 					}
 				}
-			}
+			},
 		}
 	}
 };

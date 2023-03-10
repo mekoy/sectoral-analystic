@@ -1,4 +1,5 @@
 import {PieChartContent} from "components/LineChart/PieChartContent";
+import ChartModal from "components/Modal";
 import React, {useState} from "react";
 import {Modal, ModalBody, ModalHeader} from "reactstrap";
 
@@ -44,15 +45,9 @@ const DaysDecember: React.FC<{}> = ({}) => {
 	const toggle = () => setModal(!modal);
 
 	const ModalDaysDecem = () => {
+		const title= "Répartition de l'éffort de sobiété";
 		return (
-			<Modal isOpen={modal} toggle={toggle}>
-				<ModalHeader toggle={toggle}>
-					Répartition de l'éffort de sobiété
-				</ModalHeader>
-				<ModalBody>
-					<PieChartContent />
-				</ModalBody>
-			</Modal>
+			<ChartModal title={title} isOpen={modal} toggle={toggle} ><PieChartContent /></ChartModal>
 		);
 	};
 

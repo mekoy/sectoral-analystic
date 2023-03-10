@@ -1,62 +1,87 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
+
 import  LineChart  from 'components/LineChart';
 import { ScriptableContext } from 'chart.js';
 
-const data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: [10, 20, 30, 40, 50, 60, 70],
-      borderColor: 'red',
-      fill: false
-    },
-    {
-      label: 'Dataset 2',
-      data: [70, 60, 50, 40, 30, 20, 10],
-      borderColor: 'blue',
-      fill: false
-    },
-    {
-      label: 'Background',
-      data: [10, 20, 30, 40, 50, 60, 70],
-      backgroundColor: (context:ScriptableContext<"line">) => {
-        const chart = context.chart;
-        const { ctx, chartArea } = chart;
-        if (!chartArea) {
-          // This can happen if the chart is not yet fully initialized
-          return null;
-        }
-        const top = chartArea.top;
-        const bottom = chartArea.bottom;
-        const gradient = ctx.createLinearGradient(0, top, 0, bottom);
-        gradient.addColorStop(0, 'rgba(255, 255, 255, 0.2)'); // top color
-        gradient.addColorStop(1, 'rgba(0, 0, 255, 0.2)'); // bottom color
-        return gradient;
+
+
+interface ChartData {
+  label: string;
+  data: number[];
+  backgroundColor?: any;
+  borderColor?: string;
+  fill?: any;
+}
+
+interface Props {
+  data: {
+    labels: string[];
+    datasets: ChartData[];
+  };
+}
+
+const TwoLinesChart: React.FC<Props> = ({ data }) => {
+  const options = {
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
       },
-      fill: true
-    }
-  ]
-};
+      y: {
+        grid: {
+          display: false,
+        },
+      },
+    },
+    plugins: {
+      fillBetweenLines: {
+        topFillColor: 'rgba(255, 0, 0, 0.2)',
+        bottomFillColor: 'rgba(0, 255, 0, 0.2)',
+      },
+    },
+  };
 
-const options = {
-  scales: {
-    yAxes: [
-      {
-        ticks: {
-          beginAtZero: true
-        }
-      }
-    ]
-  }
-};
-
-const TwoLinesChart = () => {
   return (
-    <div>
-      <LineChart data={data} options={options} />
-    </div>
+    <LineChart
+      data={data}
+      options={options}
+      plugins={[
+        {
+          afterDatasetsDraw: (chart: any) => {
+            const ctx = chart.ctx;
+            const topDatasetIndex = chart.getDatasetMeta(0).index;
+            const bottomDatasetIndex = chart.getDatasetMeta(1).index;
+
+            const topLine = chart.getDatasetMeta(topDatasetIndex).dataset;
+            const bottomLine = chart.getDatasetMeta(bottomDatasetIndex).dataset;
+
+            const topPoints = topLine._children;
+            const bottomPoints = bottomLine._children;
+
+            ctx.save();
+            ctx.fillStyle = chart.options.plugins.fillBetweenLines.topFillColor;
+            ctx.beginPath();
+            ctx.moveTo(topPoints[0].x, topPoints[0].y);
+
+            for (let i = 1; i < topPoints.length; i++) {
+              ctx.lineTo(topPoints[i].x, topPoints[i].y);
+            }
+
+            ctx.lineTo(topPoints[topPoints.length - 1].x, bottomPoints[bottomPoints.length - 1].y);
+
+            for (let i = bottomPoints.length - 1; i >= 0; i--) {
+              ctx.lineTo(bottomPoints[i].x, bottomPoints[i].y);
+            }
+
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+          },
+        },
+      ]}
+    />
   );
 };
 

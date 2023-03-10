@@ -4,7 +4,6 @@ import Layout from "components/Layout";
 import {Container} from "reactstrap";
 import {ICurvesConsoContextType, useCurvesConsoContext} from "pages/context";
 import DisplayConsoCurves from "pages/DisplayConsoCurves";
-import TwoLinesChart from "modules/Test";
 
 const App: React.FC<{}> = () => {
 	const {dataFetch, isLoading}: ICurvesConsoContextType =
