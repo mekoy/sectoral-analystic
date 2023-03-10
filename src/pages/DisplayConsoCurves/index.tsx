@@ -17,7 +17,7 @@ const ConsoWithChart: React.FC<IDataViz> = ({dataViz, dataApi}) => {
 		<Synthesis dataApi={dataApi} />
 	];
 
-	const labelsButton = ["Effet du climat", "Effet de la sobriété", "Synthèse"];
+  const labelsButton = ["Effet météo", "Effet de la sobriété", "Synthèse"];
 
 	const displayButtons = labelsButton.map((label, index) => {
 		return (

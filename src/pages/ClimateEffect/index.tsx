@@ -53,7 +53,7 @@ const ClimateEffect: React.FC<IDataViz> = ({ dataViz, dataApi }) => {
         line={true}
       />
       ,
-      <CurveDiffConsoEffetClimat dataApi={dataApi} title={"Effet du climat"} />,
+      <CurveDiffConsoEffetClimat dataApi={dataApi} title={"Effet météo"} />,
     </>,
   ];
 

@@ -32,9 +32,7 @@ const CurveSynthesis: React.FC<IDataProps> = ({title, line, dataApi}) => {
 			{
 				label: "Consommation effective 2022",
 				data: dataConsoReeel,
-				borderColor: !showSecondLine
-					? "rgba(255, 0, 0, 1)"
-					: "rgba(255, 0, 0, 0.2)",
+				borderColor: "rgba(255, 0, 0, 1)",
 				backgroundColor: "rgba(255, 0, 0, 1)",
 				fill: false,
 				pointStyle: false,
@@ -73,7 +71,7 @@ const CurveSynthesis: React.FC<IDataProps> = ({title, line, dataApi}) => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setShowSecondLine(true);
-		}, 3000);
+		}, 5000);
 
 		return () => clearTimeout(timer);
 	}, []);
@@ -92,8 +90,8 @@ const CurveSynthesis: React.FC<IDataProps> = ({title, line, dataApi}) => {
 				data={data}
 				plugins={datavizConfig[0].options}
 			/>
-			<DaysDecember />
-			<WeekNovember />
+			{showSecondLine && <DaysDecember />}
+			{showSecondLine && <WeekNovember />}
 		</>
 	);
 };
