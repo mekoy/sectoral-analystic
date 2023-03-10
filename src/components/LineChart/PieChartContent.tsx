@@ -21,7 +21,7 @@ export const dataDaysDecm = {
 	options: {
 		plugins: {
 			tooltip: {
-				enabled: false
+				enabled: true
 			},
 			legend: {
 				display: true,
