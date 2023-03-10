@@ -2,21 +2,17 @@ import React from "react";
 import {
 	Chart as ChartJS,
 	CategoryScale,
-	LinearScale,
 	ArcElement,
 	PointElement,
-	LineElement,
-	BarElement,
 	Title,
 	Tooltip,
 	Legend,
 	Filler
 } from "chart.js";
-import {Line} from "react-chartjs-2";
-
-import CustomLegend from "../CustomLegend";
+import {Doughnut} from "react-chartjs-2";
 
 ChartJS.defaults.font.size = 13;
+ChartJS.defaults.font.family = "Nunito Sans";
 ChartJS.defaults;
 export const chart = ChartJS.defaults;
 
@@ -29,6 +25,8 @@ type LineChartProps = {
 	data: IpPropsDataset;
 	options: {};
 	plugins?: any;
+	id: string;
+	className?: string;
 };
 export interface IpPropsDataset {
 	labels: string[];
@@ -45,10 +43,7 @@ export interface IpPropsDataset {
 
 ChartJS.register(
 	CategoryScale,
-	LinearScale,
 	PointElement,
-	LineElement,
-	BarElement,
 	ArcElement,
 	Title,
 	Tooltip,
@@ -56,23 +51,27 @@ ChartJS.register(
 	Filler
 );
 
-const LineChart: React.FC<LineChartProps> = ({
+const PieChart: React.FC<LineChartProps> = ({
 	data,
 	options,
 	width,
 	height,
-	title,
-	line,
+	id,
+	className,
 	customClass
 }) => {
 	return (
 		<div className={customClass}>
-			<Line options={options} data={data} width={width} height={height} />
-			<div className="box legend">
-				<CustomLegend data={data} title={title} line={line} />
-			</div>
+			<Doughnut
+				id={id}
+				options={options}
+				data={data}
+				width={width}
+				height={height}
+				className={className}
+			/>
 		</div>
 	);
 };
 
-export default LineChart;
+export default PieChart;
