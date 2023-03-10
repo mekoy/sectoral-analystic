@@ -33,7 +33,7 @@ const ConsoWithChart: React.FC<IDataViz> = ({ dataViz, dataApi }) => {
 
   return (
     <div
-      className={`box page-${currentPageIndex}`}
+      className={`box wrapp__content page-${currentPageIndex}`}
       style={{ position: "relative", width: "75%" }}
     >
       <div className="d-flex justify-content-between align-items-center">
