@@ -54,17 +54,17 @@ const EffectOfSobriety: React.FC<IDataViz> = ({ dataViz, dataApi }) => {
         title={"Consommation"}
         line={true}
       />
-      ,
       <CurveConsoEffectOfSobrietyDecrease
         dataApi={dataApi}
         title={"Effet de la sobriété"}
+        height={100}
       />
     </>,
   ];
 
   return (
     <>
-      <ButtonToolbar className="justify-content-end toolbar">
+      <ButtonToolbar className="customToolbar justify-content-end toolbar">
         <ButtonGroup className="me-2">
           <Button
             color="link"

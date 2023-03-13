@@ -4,6 +4,7 @@ import dataItems from "../data/db_update.json";
 import { animation } from "./animation";
 import { actions } from "./actions";
 import { externalTooltipHandler } from "./generateTooltipExternal";
+import { fillBetweenLinesPlugin } from "./fillBetweenLines";
 
 const monthLabelX = dataItems.data.filter((month) => {
   if (month.Mois) {
@@ -31,6 +32,17 @@ export const datavizConfig = [
     type: "scatter",
     options: {
       responsive: true,
+      maintainAspectRatio: true,
+      showScale: false,
+      resizeDelay: 0,
+      layout: {
+        padding: {
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+        },
+      },
       onClick: (indexValue: any) => indexValue,
       interaction: {
         mode: "index",
@@ -39,9 +51,10 @@ export const datavizConfig = [
       animation,
       actions,
       plugins: {
-        fillBetween: {
-          above: "rgba(0, 255, 0, 0.2)",
-          below: "rgba(255, 0, 0, 0.2)",
+        fillBetweenLines: {
+          above: "rgba(0, 255, 0, 0.2)", // fill color for values above intersection
+          below: "rgba(255, 0, 0, 0.2)", // fill color for values below intersection
+          //interpolate: true, // interpolate colors between intersection
         },
         filler: {
           propagate: false,
@@ -49,15 +62,15 @@ export const datavizConfig = [
         title: {
           display: true,
           text: "Puissance moyenne semaine en GW",
-          color: "rgba(129, 134, 139, 0.8)",
+          color: "rgba(129, 134, 139, 0.6)",
           font: {
-            size: 12,
+            size: 11,
             weight: 400,
             style: "normal",
           },
           align: "start",
           padding: {
-            bottom: 15,
+            bottom: 20,
             left: 10,
           },
         },
@@ -151,20 +164,26 @@ export const datavizConfig = [
       scales: {
         x: {
           grid: {
-            display: false,
+            display: true,
+            drawOnChartArea: false,
+            drawTicks: true,
           },
           labels: (context: { scale: ConfigOptionsAxesX }) => {
             if (context.scale.ticks) {
               return monthLabelX.map((week) => {
                 if (week.Mois === "1") {
                   return " ";
+                } else if (context.scale.width < 560) {
+                  return week.MenthMob;
+                } else {
+                  return week.Mois;
                 }
-                return `${week.Mois}`;
               });
             }
           },
           ticks: {
-            padding: 30,
+            beginAtZero: true,
+            padding: 20,
             autoSkip: false,
             maxRotation: 0,
             minRotation: 0,
@@ -186,6 +205,7 @@ export const datavizConfig = [
             display: false,
           },
           ticks: {
+            padding: 0,
             beginAtZero: true,
             // Get labels scales Y in GW
             callback: function (value: number, index: number, ticks: any) {

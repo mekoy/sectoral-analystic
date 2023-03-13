@@ -41,25 +41,19 @@ const ClimateEffect: React.FC<IDataViz> = ({ dataViz, dataApi }) => {
       title={"Consommation"}
       line={true}
     />,
-    <CurveDiffConsumption2022
-      dataApi={dataApi}
-      title={"Consommation"}
-      line={true}
-    />,
     <>
       <CurveDiffConsumption2022
         dataApi={dataApi}
         title={"Consommation"}
         line={true}
       />
-      ,
-      <CurveDiffConsoEffetClimat dataApi={dataApi} title={"Effet météo"} />,
-    </>,
+      {/* <CurveDiffConsoEffetClimat dataApi={dataApi} title={"Effet météo"} /> */}
+    </>
   ];
 
   return (
     <>
-      <ButtonToolbar className="justify-content-end toolbar">
+      <ButtonToolbar className="customToolbar justify-content-end">
         <ButtonGroup className="me-2">
           <Button
             color="link"

@@ -38,6 +38,7 @@ export type ConfigOptionsAxesX = {
 	chart: Chart;
 	data: ChartArea;
 	axis: string;
+	width: number;
 	bottom: number;
 	labelRotation: number;
 	ticks: {

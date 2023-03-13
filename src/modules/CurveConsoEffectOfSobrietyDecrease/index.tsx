@@ -10,12 +10,14 @@ interface IDataProps {
   dataApi: IdataResponse[];
   title?: string;
   line?: boolean;
+  height?: number
 }
 
 const CurveConsoEffectOfSobrietyDecrease: React.FC<IDataProps> = ({
   title,
   line,
   dataApi,
+  height
 }) => {
   const labelEffetSobrietyBaisse = "Entrainant une baisse de la consommation";
   const consoEffetSobriete = dataApi.map((item) => item.EffetSobriete);
@@ -58,6 +60,7 @@ const CurveConsoEffectOfSobrietyDecrease: React.FC<IDataProps> = ({
       options={datavizConfig[0].options}
       data={data}
       plugins={datavizConfig[0].options}
+      height={height}
     />
   );
 };
