@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import { datavizConfig, labels } from "utils";
 import LineChart, { IpPropsDataset } from "components/LineChart";
-import { ScriptableContext } from "chart.js";
-
+import { dataConfigEffetMeteo } from "utils/dataConfigEffetMeteo";
 interface IDataProps {
   dataApi: IdataResponse[];
   title?: string;
@@ -107,9 +106,9 @@ export const CurveDiffConsumption2022: React.FC<IDataProps> = ({
       customClass="CurveDiffConsumption2022"
       line={line}
       title={title}
-      options={datavizConfig[0].options}
+      options={dataConfigEffetMeteo[0].options}
       data={data}
-      plugins={datavizConfig[0].options}
+      plugins={dataConfigEffetMeteo[0].options}
     />
   );
 };

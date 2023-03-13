@@ -8,7 +8,7 @@ interface ILayout {
 
 const Layout: React.FC<ILayout> = ({children, classname}) => {
 	return (
-		<Container className={classname} fluid="md">
+		<Container className={`wrapp__content ${classname}`}>
 			{children}
 		</Container>
 	);

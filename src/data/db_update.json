@@ -3,6 +3,7 @@
     {
       "annee": 2022,
       "Mois": "Juillet",
+      "MenthMob": "Jul",
       "semaine": 26
     },
     {
@@ -28,6 +29,7 @@
     {
       "annee": 2022,
       "Mois": "Août",
+      "MenthMob": "Août",
       "semaine": 31
     },
     {
@@ -48,6 +50,7 @@
     {
       "annee": 2022,
       "Mois": "Septembre",
+      "MenthMob": "Sep",
       "semaine": 35
     },
     {
@@ -68,6 +71,7 @@
     {
       "annee": 2022,
       "Mois": "Octobre",
+      "MenthMob": "Oct",
       "semaine": 39
     },
     {
@@ -93,6 +97,7 @@
     {
       "annee": 2022,
       "Mois": "Novembre",
+      "MenthMob": "Nov",
       "semaine": 44
     },
     {
@@ -113,6 +118,7 @@
     {
       "annee": 2022,
       "Mois": "Décembre",
+      "MenthMob": "Déc",
       "semaine": 48
     },
     {
@@ -133,6 +139,7 @@
     {
       "annee": 2022,
       "Mois": "Janvier",
+      "MenthMob": "Jan",
       "semaine": 52
     },
     {
@@ -158,6 +165,7 @@
     {
       "annee": 2023,
       "Mois": "Fevrier",
+      "MenthMob": "Fev",
       "semaine": 5
     },
     {
@@ -178,6 +186,7 @@
     {
       "annee": 2023,
       "Mois": "Mars",
+      "MenthMob": "Mars",
       "semaine": 9
     }
   ]

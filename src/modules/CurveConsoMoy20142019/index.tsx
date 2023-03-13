@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 
 import { datavizConfig, labels } from "utils";
 import LineChart, { IpPropsDataset } from "components/LineChart";
-import { ScriptableContext } from "chart.js";
 
 interface IDataProps {
   dataApi: IdataResponse[];
