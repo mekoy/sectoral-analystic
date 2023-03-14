@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans sans-serif ", ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -127,6 +127,14 @@ fieldset:disabled .btn,
   width: auto;
   margin-left: 5px;
 }
+.box_legend {
+  width: 100%;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 3px rgba(255, 255, 255,0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255);
+}
 
 .components__warpper {
   position: relative;
@@ -188,11 +196,12 @@ canvas#pieChart {
 @media screen and (min-width:320px) {
   .legend {
     display: flex;
+    height: 100%;
   }
   .box {
     width: 100%;
+    /* height: 174px; */
   }
-
   .CurveDiffConsoEffetClimat {
     margin-top: 20px;
   }
@@ -202,28 +211,28 @@ canvas#pieChart {
   }
 }
 
-@media screen and (max-width:360px) {
-  canvas {
-    height: 100%;
+@media screen and (min-width:360px) and (max-width:768px) {
+  .legend_content_title {
+    font-size: 13px;
   }
-} 
-
-@media screen and (min-width:360px) and (max-width:740px) {
   .customToolbar {
     right: 5%;
   }
   .box {
     width: 100%;
   }
-  
-  .custom canvas {
-    height: 100%;
+  .box_legend {
     width: 100%;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255);
   }
-
   .legend {
     display: flex;
     width: 100%;
+    height: 100%;
   }
   .legend__content {
     width: 100%;
@@ -251,6 +260,9 @@ canvas#pieChart {
   .customToolbar {
     right: 28%;
   }
+  .legend_content_title {
+    font-size: 13px;
+  }
   .legend__content--item {
     font-size: 11px;
   }
@@ -262,21 +274,22 @@ canvas#pieChart {
 
   .legend {
     display: flex;
+    height: 100%;
   }
-
-  .container {
-    max-width: 95% !important;
+  .box {
+    width: 100%;
   }
-
   .btn.arrow {
     font-size: 2rem;
   }
+  
 }
 
 /* # Desktop */
 @media screen and (min-width:998px) {
   .legend {
     display: block;
+    height: 100%;
   }
 
   .btn.arrow {
@@ -286,4 +299,9 @@ canvas#pieChart {
 .label_legend {
   width: 100%;
   padding: 5px;
+}
+.legend_content_title {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
 }

@@ -16,20 +16,21 @@ import {Line} from "react-chartjs-2";
 
 import CustomLegend from "../CustomLegend";
 import {Row, Col} from "reactstrap";
+import {useWindowSize} from "utils/hook/useWindowSize";
 
-ChartJS.defaults.font.size = 13;
-ChartJS.defaults;
-export const chart = ChartJS.defaults;
+ChartJS.defaults.font.size = 16;
+export const chart = ChartJS;
+chart.defaults.font.family = "Nunito Sans sans-serif";
 
 type LineChartProps = {
 	title?: React.ReactNode;
 	line?: boolean;
 	customClass?: string;
-	width?: string | number;
-	height?: string | number;
 	data: IpPropsDataset;
 	options: {};
 	plugins?: any;
+	height?: string | number;
+	width?: string | number;
 };
 export interface IpPropsDataset {
 	labels: string[];
@@ -60,17 +61,23 @@ ChartJS.register(
 const LineChart: React.FC<LineChartProps> = ({
 	data,
 	options,
-	width,
-	height,
 	title,
 	line,
 	customClass
 }) => {
+	const [width] = useWindowSize();
+
 	return (
 		<Row className={`${customClass}`}>
 			<Col lg="9" md="9" sm="12" xs="12">
 				<div className={`box custom`}>
-					<Line options={options} data={data} width={width} height={height} />
+					<Line
+						id="chart-container"
+						className="chart-container_box"
+						options={options}
+						data={data}
+						height={width < 390 ? 210 : 150}
+					/>
 				</div>
 			</Col>
 			<Col lg="3" md="3" sm="12" xs="12" className="legend">

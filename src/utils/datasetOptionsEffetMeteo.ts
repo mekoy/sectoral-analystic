@@ -19,6 +19,8 @@ export const datavizConfigEffetMeteo = [
 	{
 		options: {
 			responsive: true,
+
+			showScale: false,
 			interaction: {
 				mode: "index",
 				intersect: false
@@ -65,70 +67,10 @@ export const datavizConfigEffetMeteo = [
 				},
 				legend: {
 					display: false,
-					// title: {
-					// 	display: true,
-					// 	color: "rgb(0, 0, 0)",
-					// 	text: "Text custom",
-					// 	padding: {
-					// 		top: 45,
-					// 		left: 25,
-					// 		right: 30
-					// 	},
-					// 	font: {
-					// 		size: 14,
-					// 		weight: "bold"
-					// 	}
-					// },
 					labels: {
 						boxWidth: 0,
 						boxHeight: 0,
 						padding: 20
-						// filter: (legendItem: ConfigOptionsLegend) => {
-						// 	//console.log(legendItem, "data");
-						// 	switch (legendItem.text) {
-						// 		case "Moyenne 2014-2019":
-						// 			return {
-						// 				borderRadius: (legendItem.borderRadius = 2)
-						// 			};
-						// 		case "Consommation corrigée 2022":
-						// 			return {
-						// 				borderRadius: (legendItem.borderRadius = 2)
-						// 			};
-						// 		case "Consommation réelle 2022":
-						// 			return {
-						// 				borderRadius: (legendItem.borderRadius = 2)
-						// 			};
-						// 		case "Entrainant une baisse de la consommation":
-						// 			return {
-						// 				borderRadius: (legendItem.borderRadius = 2)
-						// 			};
-						// 		case "Entrainant une hausse de la consommation":
-						// 			return {
-						// 				borderRadius: (legendItem.borderRadius = 2)
-						// 			};
-						// 		case "Entrainant une baisse de la consommation":
-						// 			return {
-						// 				borderRadius: (legendItem.borderRadius = 2)
-						// 			};
-						// 		default:
-						// 			break;
-						// 	}
-						// },
-						// generateLabels: (chart: Chart) => {
-						// 	const data = chart.data;
-						// 	if (data.labels && data.datasets) {
-						// 		return data.datasets.map((dataset, i) => {
-						// 			return {
-						// 				text: dataset.label || "",
-						// 				fillStyle: dataset.borderColor || "",
-						// 				hidden: chart.getDatasetMeta(i).hidden,
-						// 				index: i
-						// 			};
-						// 		});
-						// 	}
-						// 	return [];
-						// }
-						// Use our custom legend item component
 					},
 					position: "right",
 					align: "start"
@@ -144,8 +86,11 @@ export const datavizConfigEffetMeteo = [
 							return monthLabelX.map((week) => {
 								if (week.Mois === "1") {
 									return " ";
+								} else if (context.scale.width < 640) {
+									return week.MenthMob;
+								} else {
+									return week.Mois;
 								}
-								return `${week.Mois}`;
 							});
 						}
 					},
