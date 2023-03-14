@@ -43,7 +43,7 @@ export const optionDataConfigConsumption2022 = [
           text: "Puissance moyenne semaine en GW",
           color: "rgba(129, 134, 139, 0.6)",
           font: {
-            size: 12,
+            size: 11,
             weight: 400,
             style: "normal",
           },

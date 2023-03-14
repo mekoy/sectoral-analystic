@@ -73,6 +73,7 @@ const CurveDiffConsoEffetClimat: React.FC<IDataVizGlobal> = ({
 			options={optionDataConfigEffetClimat[0].options}
 			data={data}
 			plugins={optionDataConfigEffetClimat[0].options}
+			height={200}
 		/>
 	);
 };

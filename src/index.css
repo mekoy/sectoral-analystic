@@ -230,7 +230,7 @@ canvas#pieChart {
     background-color: rgba(255, 255, 255);
   }
   .legend {
-    display: flex;
+    /* display: flex; */
     width: 100%;
     height: 100%;
   }

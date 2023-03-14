@@ -56,8 +56,8 @@ export const optionDataConfigConso20142019 = [
           },
           align: "start",
           padding: {
-            bottom: 0,
-            left: 10,
+            bottom: 20,
+            left: 10
           },
         },
         events: ["click"],

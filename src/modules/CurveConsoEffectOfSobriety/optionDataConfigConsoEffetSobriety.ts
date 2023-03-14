@@ -54,7 +54,7 @@ export const optionDataConfigConsoEffetSobriety = [
           },
           align: "start",
           padding: {
-            bottom: 0,
+            bottom: 20,
             left: 10,
           },
         },
