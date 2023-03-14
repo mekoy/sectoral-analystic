@@ -31,7 +31,6 @@ const ChartActualConsumption2022: React.FC<IDataProps> = ({
 			}
 		]
 	};
-
 	return (
 		<div>
 			<LineChart

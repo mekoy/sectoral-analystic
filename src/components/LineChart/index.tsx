@@ -18,7 +18,7 @@ import CustomLegend from "../CustomLegend";
 import {Row, Col} from "reactstrap";
 import {useWindowSize} from "utils/hook/useWindowSize";
 
-ChartJS.defaults.font.size = 12;
+ChartJS.defaults.font.size = 16;
 export const chart = ChartJS;
 chart.defaults.font.family = "Nunito Sans sans-serif";
 
@@ -29,7 +29,8 @@ type LineChartProps = {
 	data: IpPropsDataset;
 	options: {};
 	plugins?: any;
-	height?: number;
+	height?: string | number;
+	width?: string | number;
 };
 export interface IpPropsDataset {
 	labels: string[];
@@ -64,7 +65,8 @@ const LineChart: React.FC<LineChartProps> = ({
 	line,
 	customClass
 }) => {
-	const [width, height] = useWindowSize();
+	const [width] = useWindowSize();
+
 	return (
 		<Row className={`${customClass}`}>
 			<Col lg="9" md="9" sm="12" xs="12">
@@ -74,7 +76,7 @@ const LineChart: React.FC<LineChartProps> = ({
 						className="chart-container_box"
 						options={options}
 						data={data}
-						height={width <= 390 ? 260 : 200}
+						height={width < 390 ? 210 : 150}
 					/>
 				</div>
 			</Col>
