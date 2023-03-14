@@ -1,10 +1,11 @@
-import {Chart, LinearScaleOptions} from "chart.js";
-import {ConfigOptions, ConfigOptionsAxesX, ConfigOptionsLegend} from "./type";
-import dataItems from "../data/db_update.json";
-import {animation} from "./animation";
-import {actions} from "./actions";
-import {externalTooltipHandler} from "./generateTooltipExternal";
-import {fillBetweenLinesPlugin} from "./fillBetweenLines";
+import {LinearScaleOptions} from "chart.js";
+import {
+	ConfigOptions,
+	ConfigOptionsAxesX,
+	ConfigOptionsLegend
+} from "utils/type";
+import dataItems from "data/db_update.json";
+import {actions} from "utils/actions";
 
 const monthLabelX = dataItems.data.filter((month) => {
 	if (month.Mois) {
@@ -14,20 +15,9 @@ const monthLabelX = dataItems.data.filter((month) => {
 
 export const labels = ["Oct", "Nov", "Dec", "Jan", "Fev", "Mars"];
 
-//get years for Data
-export const yearsFull = (back: number): {label: string; year: number}[] => {
-	const year: number = new Date().getFullYear();
-	return Array.from({length: back}, (v: number, i: number) => {
-		return {
-			label: "year",
-			year: year - back + i - 3
-		};
-	});
-};
-
 //add label axes X label weeks
 // chartJs config
-export const datavizConfig = [
+export const optionDataConfigConsoCorrect = [
 	{
 		type: "scatter",
 		options: {
@@ -37,25 +27,18 @@ export const datavizConfig = [
 			resizeDelay: 0,
 			layout: {
 				padding: {
-					left: 0,
+					left: 10,
 					right: 0,
 					top: 0,
-					bottom: 0
+					bottom: 10
 				}
 			},
-			onClick: (indexValue: any) => indexValue,
 			interaction: {
 				mode: "index",
 				intersect: false
 			},
-			animation,
 			actions,
 			plugins: {
-				fillBetweenLines: {
-					above: "rgba(0, 255, 0, 0.2)", // fill color for values above intersection
-					below: "rgba(255, 0, 0, 0.2)" // fill color for values below intersection
-					//interpolate: true, // interpolate colors between intersection
-				},
 				filler: {
 					propagate: false
 				},
@@ -103,37 +86,7 @@ export const datavizConfig = [
 					labels: {
 						boxWidth: 12,
 						boxHeight: 0,
-						padding: 20,
-						filter: (legendItem: ConfigOptionsLegend) => {
-							switch (legendItem.text) {
-								case "Moyenne 2014-2019":
-									return {
-										borderRadius: (legendItem.borderRadius = 2)
-									};
-								case "Consommation corrigée 2022":
-									return {
-										borderRadius: (legendItem.borderRadius = 2)
-									};
-								case "Consommation réelle 2022":
-									return {
-										borderRadius: (legendItem.borderRadius = 2)
-									};
-								case "Entrainant une baisse de la consommation":
-									return {
-										borderRadius: (legendItem.borderRadius = 2)
-									};
-								case "Entrainant une hausse de la consommation":
-									return {
-										borderRadius: (legendItem.borderRadius = 2)
-									};
-								case "Entrainant une baisse de la consommation":
-									return {
-										borderRadius: (legendItem.borderRadius = 2)
-									};
-								default:
-									break;
-							}
-						}
+						padding: 20
 					},
 					position: "top",
 					align: "start"
