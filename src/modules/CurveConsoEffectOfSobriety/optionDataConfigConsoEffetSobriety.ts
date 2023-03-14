@@ -78,7 +78,7 @@ export const optionDataConfigConsoEffetSobriety = [
           },
           callbacks: {
             title: (tooltipItem: TooltipItem<"line">[]) => {
-              return `Novembre Semaine ${tooltipItem[0].dataIndex}`;
+              return `Semaine ${tooltipItem[0].dataIndex}`;
             },
             label: (context: ConfigOptions) => {
               return ` ${context.dataset.label} - ${Math.floor(
