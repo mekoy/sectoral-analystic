@@ -8,12 +8,14 @@ interface IDataProps {
 	dataApi: IdataResponse[];
 	title?: string;
 	line?: boolean;
+	chartIndex?: number;
 }
 
 const ChartActualConsumption2022: React.FC<IDataProps> = ({
 	title,
 	line,
-	dataApi
+	dataApi,
+	chartIndex
 }) => {
 	const conso_realisee = dataApi.map((item) => item.conso_realisee);
 
@@ -32,6 +34,7 @@ const ChartActualConsumption2022: React.FC<IDataProps> = ({
 		]
 	};
 	return (
+<<<<<<< HEAD
 		<div>
 			<LineChart
 				customClass="ChartActualConsumption2022"
@@ -42,6 +45,18 @@ const ChartActualConsumption2022: React.FC<IDataProps> = ({
 				plugins={optionDataConfigConsumption2022[0].options}
 			/>
 		</div>
+=======
+		<LineChart
+			customClass="ChartActualConsumption2022"
+			title={title}
+			line={line}
+			options={optionDataConfigConsumption2022[0].options}
+			data={data}
+			plugins={optionDataConfigConsumption2022[0].options}
+			chartIndex={chartIndex}
+			height={200}
+		/>
+>>>>>>> eb00342 (custom click legend)
 	);
 };
 

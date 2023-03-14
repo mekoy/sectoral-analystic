@@ -34,17 +34,20 @@ const ClimateEffect: React.FC<IDataViz> = ({dataViz, dataApi}) => {
 			dataApi={dataApi}
 			title={"Consommation"}
 			line={true}
+			chartIndex={1}
 		/>,
 		<CurveCorrectedConsumption2022
 			dataApi={dataApi}
 			title={"Consommation"}
 			line={true}
+			chartIndex={3}
 		/>,
 		<>
 			<CurveDiffConsumption2022
 				dataApi={dataApi}
 				title={"Consommation"}
 				line={true}
+				chartIndex={5}
 			/>
 		</>
 	];

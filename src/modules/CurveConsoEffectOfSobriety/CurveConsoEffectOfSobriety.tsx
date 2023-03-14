@@ -10,12 +10,14 @@ interface IDataProps {
 	dataApi: IdataResponse[];
 	title?: string;
 	line?: boolean;
+	chartIndex?: number;
 }
 
 const CurveConsoEffectOfSobriety: React.FC<IDataProps> = ({
 	title,
 	line,
-	dataApi
+	dataApi,
+	chartIndex
 }) => {
 	const [showSecondLine, setShowSecondLine] = useState(false);
 
@@ -95,6 +97,8 @@ const CurveConsoEffectOfSobriety: React.FC<IDataProps> = ({
 			options={optionDataConfigConsoEffetSobriety[0].options}
 			data={data}
 			plugins={optionDataConfigConsoEffetSobriety[0].options}
+			chartIndex={chartIndex}
+			height={200}
 		/>
 	);
 };

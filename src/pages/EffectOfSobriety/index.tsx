@@ -36,16 +36,19 @@ const EffectOfSobriety: React.FC<IDataViz> = ({dataViz, dataApi}) => {
 			dataApi={dataApi}
 			title={"Consommation"}
 			line={true}
+			chartIndex={3}
 		/>,
 		<>
 			<CurveConsoEffectOfSobriety
 				dataApi={dataApi}
 				title={"Consommation"}
 				line={true}
+				chartIndex={6}
 			/>
 			<CurveConsoEffectOfSobriety
 				dataApi={dataApi}
 				title={"Effet de la sobriété"}
+				chartIndex={7}
 			/>
 		</>,
 		<>
@@ -53,11 +56,13 @@ const EffectOfSobriety: React.FC<IDataViz> = ({dataViz, dataApi}) => {
 				dataApi={dataApi}
 				title={"Consommation"}
 				line={true}
+				chartIndex={10}
 			/>
 			<CurveConsoEffectOfSobrietyDecrease
 				dataApi={dataApi}
 				title={"Effet de la sobriété"}
-				height={100}
+				height={80}
+				chartIndex={11}
 			/>
 		</>
 	];

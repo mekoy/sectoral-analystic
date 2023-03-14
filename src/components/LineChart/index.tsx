@@ -29,8 +29,7 @@ type LineChartProps = {
 	data: IpPropsDataset;
 	options: {};
 	plugins?: any;
-	height?: string | number;
-	width?: string | number;
+	chartIndex?: number;
 };
 export interface IpPropsDataset {
 	labels: string[];
@@ -63,7 +62,8 @@ const LineChart: React.FC<LineChartProps> = ({
 	options,
 	title,
 	line,
-	customClass
+	customClass,
+	chartIndex
 }) => {
 	const [width] = useWindowSize();
 
@@ -81,7 +81,7 @@ const LineChart: React.FC<LineChartProps> = ({
 				</div>
 			</Col>
 			<Col lg="3" md="3" sm="12" xs="12" className="legend">
-				<CustomLegend data={data} title={title} line={line} />
+				<CustomLegend data={data} title={title} line={line} chartIndex={chartIndex} />
 			</Col>
 		</Row>
 	);

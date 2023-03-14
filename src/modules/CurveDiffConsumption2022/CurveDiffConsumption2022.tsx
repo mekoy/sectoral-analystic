@@ -8,12 +8,14 @@ interface IDataProps {
 	dataApi: IdataResponse[];
 	title?: string;
 	line?: boolean;
+	chartIndex?: number;
 }
 
 export const CurveDiffConsumption2022: React.FC<IDataProps> = ({
 	title,
 	dataApi,
-	line
+	line,
+	chartIndex
 }) => {
 	const [chartData, setChartData] = useState<IpPropsDataset>({
 		labels: [],
@@ -77,6 +79,8 @@ export const CurveDiffConsumption2022: React.FC<IDataProps> = ({
 			options={optionDataConfigEffetClimatDiff[0].options}
 			data={data}
 			plugins={optionDataConfigEffetClimatDiff[0].options}
+			chartIndex={chartIndex}
+			height={200}
 		/>
 	);
 };

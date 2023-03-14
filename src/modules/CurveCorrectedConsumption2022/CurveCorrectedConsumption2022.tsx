@@ -9,12 +9,14 @@ interface IDataProps {
 	dataApi: IdataResponse[];
 	title?: string;
 	line?: boolean;
+	chartIndex?: number;
 }
 
 export const CurveCorrectedConsumption2022: React.FC<IDataProps> = ({
 	title,
 	line,
-	dataApi
+	dataApi,
+	chartIndex
 }) => {
 	const [chartData, setChartData] = useState<IpPropsDataset>({
 		labels: [],
@@ -78,6 +80,8 @@ export const CurveCorrectedConsumption2022: React.FC<IDataProps> = ({
 			options={optionDataConfigConsoCorrect[0].options}
 			data={data}
 			plugins={optionDataConfigConsoCorrect[0].options}
+			chartIndex={chartIndex}
+			height={200}
 		/>
 	);
 };
