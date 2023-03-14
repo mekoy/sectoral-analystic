@@ -1,7 +1,12 @@
 import {Chart, ChartArea} from "chart.js";
 
 export type ConfigOptions = {
+	raw: any;
+	chartInstance: any;
+	tooltip: any;
+	body: any;
 	chart: any;
+	title: string[];
 	dataIndex: number;
 	formattedValue: string;
 	label: string;
