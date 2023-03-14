@@ -19,6 +19,8 @@ export const datavizConfigEffetSobriety = [
 	{
 		options: {
 			responsive: true,
+
+			showScale: false,
 			interaction: {
 				mode: "index",
 				intersect: false
@@ -140,12 +142,16 @@ export const datavizConfigEffetSobriety = [
 						display: true
 					},
 					labels: (context: {scale: ConfigOptionsAxesX}) => {
+						console.log(context, "context+++++");
 						if (context.scale.ticks) {
 							return monthLabelX.map((week) => {
 								if (week.Mois === "1") {
 									return " ";
+								} else if (context.scale.width <= 768) {
+									return week.MenthMob;
+								} else {
+									return week.Mois;
 								}
-								return `${week.Mois}`;
 							});
 						}
 					},

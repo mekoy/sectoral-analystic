@@ -33,14 +33,16 @@ const ChartActualConsumption2022: React.FC<IDataProps> = ({
 	};
 
 	return (
-		<LineChart
-			customClass="ChartActualConsumption2022"
-			title={title}
-			line={line}
-			options={optionDataConfigConsumption2022[0].options}
-			data={data}
-			plugins={optionDataConfigConsumption2022[0].options}
-		/>
+		<div>
+			<LineChart
+				customClass="ChartActualConsumption2022"
+				title={title}
+				line={line}
+				options={optionDataConfigConsumption2022[0].options}
+				data={data}
+				plugins={optionDataConfigConsumption2022[0].options}
+			/>
+		</div>
 	);
 };
 
