@@ -1,10 +1,12 @@
-import {Chart, LinearScaleOptions} from "chart.js";
-import {ConfigOptions, ConfigOptionsAxesX, ConfigOptionsLegend} from "./type";
-import dataItems from "../data/db_update.json";
-import {animation} from "./animation";
-import {actions} from "./actions";
-import {externalTooltipHandler} from "./generateTooltipExternal";
-import {fillBetweenLinesPlugin} from "./fillBetweenLines";
+import {LinearScaleOptions} from "chart.js";
+import {
+	ConfigOptions,
+	ConfigOptionsAxesX,
+	ConfigOptionsLegend
+} from "utils/type";
+import dataItems from "data/db_update.json";
+import {animation} from "utils/animation";
+import {actions} from "utils/actions";
 
 const monthLabelX = dataItems.data.filter((month) => {
 	if (month.Mois) {
@@ -14,20 +16,9 @@ const monthLabelX = dataItems.data.filter((month) => {
 
 export const labels = ["Oct", "Nov", "Dec", "Jan", "Fev", "Mars"];
 
-//get years for Data
-export const yearsFull = (back: number): {label: string; year: number}[] => {
-	const year: number = new Date().getFullYear();
-	return Array.from({length: back}, (v: number, i: number) => {
-		return {
-			label: "year",
-			year: year - back + i - 3
-		};
-	});
-};
-
 //add label axes X label weeks
 // chartJs config
-export const datavizConfig = [
+export const optionDataConfigEffetClimat = [
 	{
 		type: "scatter",
 		options: {

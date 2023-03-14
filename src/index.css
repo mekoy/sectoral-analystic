@@ -171,7 +171,7 @@ canvas#pieChart {
 
 .page-1 .row:nth-child(2) .legend {
   position: relative;
-  top: -340px;
+  top: 16px
 }
 
 .page-1 .row:last-child .CurveConsoEffectOfSobriety,
@@ -187,7 +187,10 @@ canvas#pieChart {
 /* # Phone */
 @media screen and (min-width:320px) {
   .legend {
-    display: none;
+    display: flex;
+  }
+  .box {
+    width: 100%;
   }
 
   .CurveDiffConsoEffetClimat {
@@ -199,14 +202,34 @@ canvas#pieChart {
   }
 }
 
+@media screen and (max-width:360px) {
+  canvas {
+    height: 100%;
+  }
+} 
 
-@media screen and (min-width:321px) and (max-width:768px) {
+@media screen and (min-width:360px) and (max-width:740px) {
   .customToolbar {
     right: 5%;
   }
+  .box {
+    width: 100%;
+  }
+  
+  .custom canvas {
+    height: 100%;
+    width: 100%;
+  }
 
   .legend {
-    display: none;
+    display: flex;
+    width: 100%;
+  }
+  .legend__content {
+    width: 100%;
+  }
+  .legend__content--item {
+    font-size: 11px;
   }
 
   .CurveDiffConsoEffetClimat {
@@ -224,13 +247,21 @@ canvas#pieChart {
 
 
 /* # Tablet */
-@media screen and (min-width:769px) and (max-width:997px) {
+@media screen and (min-width:768px) and (max-width:1024px) {
   .customToolbar {
     right: 28%;
   }
+  .legend__content--item {
+    font-size: 11px;
+  }
+
+  .showChart {
+    color: rgba(6, 7, 9, 1);
+    font-size: 1rem;
+}
 
   .legend {
-    display: block;
+    display: flex;
   }
 
   .container {
@@ -251,4 +282,8 @@ canvas#pieChart {
   .btn.arrow {
     font-size: 2rem;
   }
+}
+.label_legend {
+  width: 100%;
+  padding: 5px;
 }

@@ -1,11 +1,10 @@
 import {IdataResponse} from "pages/context";
 import React, {useEffect, useState} from "react";
 
-import {datavizConfig, labels} from "utils";
+import {labels} from "utils";
 import LineChart, {IpPropsDataset} from "components/LineChart";
 import {ScriptableContext} from "chart.js";
-import WeekNovember from "./weekNovember";
-import DaysDecember from "./daysDecember";
+import {optionDataConfigConsoEffetSecond} from "./optionDataConfigConsoEffetSecond";
 
 interface IDataProps {
 	dataApi: IdataResponse[];
@@ -13,7 +12,11 @@ interface IDataProps {
 	line?: boolean;
 }
 
-const CurveSynthesis: React.FC<IDataProps> = ({title, line, dataApi}) => {
+const CurveConsoEffectOfSobrietySecond: React.FC<IDataProps> = ({
+	title,
+	line,
+	dataApi
+}) => {
 	const [showSecondLine, setShowSecondLine] = useState(false);
 	const [chartData, setChartData] = useState<IpPropsDataset>({
 		labels: [],
@@ -30,9 +33,21 @@ const CurveSynthesis: React.FC<IDataProps> = ({title, line, dataApi}) => {
 		labels,
 		datasets: [
 			{
+				label: "Consommation Moyenne 2014-2019",
+				data: dataConsoYearP,
+				borderColor: "rgba(0, 0, 0, 0.7)",
+				backgroundColor: "",
+				fill: false,
+				pointStyle: false,
+				tension: 0.5,
+				borderWidth: 2
+			},
+			{
 				label: "Consommation effective 2022",
 				data: dataConsoReeel,
-				borderColor: "rgba(255, 0, 0, 1)",
+				borderColor: !showSecondLine
+					? "rgba(255, 0, 0, 1)"
+					: "rgba(255, 0, 0, 0.2)",
 				backgroundColor: "rgba(255, 0, 0, 1)",
 				fill: false,
 				pointStyle: false,
@@ -45,25 +60,25 @@ const CurveSynthesis: React.FC<IDataProps> = ({title, line, dataApi}) => {
 				borderColor: "rgba(248, 81, 9, 1)",
 				backgroundColor: "rgba(248, 81, 9, 1)",
 				fill: false,
-				borderWidth: 3,
+				borderWidth: 4,
 				pointStyle: false,
 				tension: 0.7
 			},
 			{
 				label: "Entrainant une baisse de la consommation",
 				data: dataConsoYearP,
-				borderColor: "rgba(126, 126, 126, 1)",
+				borderColor: "rgba(12, 184, 213, 0.2)",
 				backgroundColor: (context: ScriptableContext<"line">) => {
 					const ctx = context.chart.ctx;
-					const gradient = ctx.createLinearGradient(12, 164, 212, 1);
-					gradient.addColorStop(1, "rgba(12, 164, 212, 1)");
-					gradient.addColorStop(0, "rgba(12, 104, 212, 0)");
+					const gradient = ctx.createLinearGradient(12, 184, 213, 0.2);
+					gradient.addColorStop(1, "rgba(12, 184, 213, 0.2)");
+					gradient.addColorStop(0, "rgba(12, 184, 213, 0)");
 					return gradient;
 				},
-				fill: false,
+				fill: "-1",
 				pointStyle: false,
 				tension: 0.5,
-				borderWidth: 2
+				borderWidth: 1
 			}
 		]
 	};
@@ -71,7 +86,7 @@ const CurveSynthesis: React.FC<IDataProps> = ({title, line, dataApi}) => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setShowSecondLine(true);
-		}, 5000);
+		}, 3000);
 
 		return () => clearTimeout(timer);
 	}, []);
@@ -81,19 +96,15 @@ const CurveSynthesis: React.FC<IDataProps> = ({title, line, dataApi}) => {
 	}, [showSecondLine]);
 
 	return (
-		<>
-			<LineChart
-				customClass="CurveSynthesis"
-				title={title}
-				line={line}
-				options={datavizConfig[0].options}
-				data={data}
-				plugins={datavizConfig[0].options}
-			/>
-			{showSecondLine && <DaysDecember />}
-			{showSecondLine && <WeekNovember />}
-		</>
+		<LineChart
+			customClass="CurveConsoEffectOfSobrietySecond"
+			title={title}
+			line={line}
+			options={optionDataConfigConsoEffetSecond[0].options}
+			data={data}
+			plugins={optionDataConfigConsoEffetSecond[0].options}
+		/>
 	);
 };
 
-export default CurveSynthesis;
+export default CurveConsoEffectOfSobrietySecond;
